@@ -1,239 +1,239 @@
 ============================================
-== PXutil ƒoƒ“ƒhƒ‹ v0.6.2   <2009/06/07>  ==
+== PXutil $B%P%s%I%k(B v0.6.2   <2009/06/07>  ==
 ==          by ZR <zrbabbler@infoseek.jp> ==
 ============================================
 (This file is encoded in ISO-2022-JP,)
 
-“ú–{Œê TeX ŠÖ˜A‚Ìƒf[ƒ^ƒtƒ@ƒCƒ‹‚ð‘€ì‚·‚éŽíX‚Ì‹@”\‚ð’ñ‹Ÿ‚·‚éƒc[ƒ‹‚Å‚ ‚éB
-Œ»Ý‚Ì‚Æ‚±‚ëAŽŸ‚Ì‹@”\‚ª—˜—p‚Å‚«‚éB
+$BF|K\8l(B TeX $B4XO"$N%G!<%?%U%!%$%k$rA`:n$9$k<o!9$N5!G=$rDs6!$9$k%D!<%k$G$"$k!#(B
+$B8=:_$N$H$3$m!"<!$N5!G=$,MxMQ$G$-$k!#(B
 
-  - ˜a•¶‚Ì‰¼‘zƒtƒHƒ“ƒg(VF ‚Æ JFM ‚Ì‘g)‚É‘Î‰ž‚·‚é“ÆŽ©Žd—l‚ÌƒeƒLƒXƒgŒ`Ž®‚Å
-    ‚ ‚éuZVP Œ`Ž®v‚Æ‰¼‘zƒtƒHƒ“ƒg‚Æ‚ÌŠÔ‚Ì‘ŠŒÝ•ÏŠ·B¡‚Ü‚ÅA˜a•¶ VF ‚Ì
-    ¶¬E•ÒW‚Í‚»‚ê‚É‘Î‰ž‚·‚éƒeƒLƒXƒgŒ`Ž®‚ª‚È‚©‚Á‚½‚½‚ß”ñí‚É–Ê“|‚Å
-    ‚ ‚Á‚½BZVP Œ`Ž®‚ðŽg‚¤‚±‚Æ‚ÅA˜a•¶ VF ‚ÌV‹Kì¬‚â•ÒW‚ª—eˆÕ‚É‚È‚é
-    ‚±‚Æ‚ªŠú‘Ò‚Å‚«‚éB
-  - ZVP ’†‚Ì VF ‚É’¼Ú‘Î‰ž‚·‚é•”•ª‚ð”²‚«o‚µ‚½uZVP0 Œ`Ž®v‚Æ VF (˜a•¶/
-    ‰¢•¶)‚Æ‚ÌŠÔ‚Ì‘ŠŒÝ•ÏŠ·B
+  - $BOBJ8$N2>A[%U%)%s%H(B(VF $B$H(B JFM $B$NAH(B)$B$KBP1~$9$kFH<+;EMM$N%F%-%9%H7A<0$G(B
+    $B$"$k!V(BZVP $B7A<0!W$H2>A[%U%)%s%H$H$N4V$NAj8_JQ49!#:#$^$G!"OBJ8(B VF $B$N(B
+    $B@8@.!&JT=8$O$=$l$KBP1~$9$k%F%-%9%H7A<0$,$J$+$C$?$?$aHs>o$KLLE]$G(B
+    $B$"$C$?!#(BZVP $B7A<0$r;H$&$3$H$G!"OBJ8(B VF $B$N?75,:n@.$dJT=8$,MF0W$K$J$k(B
+    $B$3$H$,4|BT$G$-$k!#(B
+  - ZVP $BCf$N(B VF $B$KD>@\BP1~$9$kItJ,$rH4$-=P$7$?!V(BZVP0 $B7A<0!W$H(B VF ($BOBJ8(B/
+    $B2$J8(B)$B$H$N4V$NAj8_JQ49!#(B
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ðŽÀs‚·‚éˆ×‚É‚ÍA•Ê“r ZRTeXtor ƒ‚ƒWƒ…[ƒ‹‚ð—pˆÓ‚·‚é•K—v‚ª
-‚ ‚éB‰º‹L‚ÌƒTƒCƒg‚©‚ç“üŽè‰Â”\B
+$B$3$N%W%m%0%i%`$r<B9T$9$k0Y$K$O!"JLES(B ZRTeXtor $B%b%8%e!<%k$rMQ0U$9$kI,MW$,(B
+$B$"$k!#2<5-$N%5%$%H$+$iF~<j2DG=!#(B
 
-¡ –{ƒ\ƒtƒgƒEƒFƒA‚ÌˆêŽŸ”z•zƒTƒCƒg(ìŽÒ‚ÌƒTƒCƒg)
+$B"#(B $BK\%=%U%H%&%'%"$N0l<!G[I[%5%$%H(B($B:n<T$N%5%$%H(B)
 
-    En toi Pythmeni tes TeXnopoleos `“d”]¢ŠE‚Ì‰œ’ê‚É‚Ä`
+    En toi Pythmeni tes TeXnopoleos $B!AEEG>@$3&$N1|Dl$K$F!A(B
     http://zrbabbler.hp.infoseek.co.jp/
 
-    ZRTeXtor ƒ‚ƒWƒ…[ƒ‹‚à‚±‚±‚©‚ç“üŽè‚Å‚«‚éB
+    ZRTeXtor $B%b%8%e!<%k$b$3$3$+$iF~<j$G$-$k!#(B
 
-    ƒpƒbƒP[ƒW‚ð—p‚¢‚½˜a•¶‰¼‘zƒtƒHƒ“ƒg‚Ì‰ü•Ï‚Ì•û–@‚ªˆÈ‰º‚Ìƒy[ƒW‚Å‰ðà
-    ‚³‚ê‚Ä‚¢‚éB
+    $B%Q%C%1!<%8$rMQ$$$?OBJ82>A[%U%)%s%H$N2~JQ$NJ}K!$,0J2<$N%Z!<%8$G2r@b(B
+    $B$5$l$F$$$k!#(B
     http://zrbabbler.hp.infoseek.co.jp/pxutil.html
 
-¡ ‘Î‰žŠÂ‹«
+$B"#(B $BBP1~4D6-(B
 
-    - Perl ˆ—Œn: v5.8.1 ˆÈ~
-    - ZRTeXtor ƒ‚ƒWƒ…[ƒ‹: v1.2.1 ˆÈ~
-    - Kpathsearch ‘Î‰ž‚Ì TeX ‚ÉŠÜ‚Ü‚ê‚é kpsewhich ƒRƒ}ƒ“ƒh
-    - pTeX ‚Ì pltotf, tftopl ƒRƒ}ƒ“ƒh
+    - Perl $B=hM}7O(B: v5.8.1 $B0J9_(B
+    - ZRTeXtor $B%b%8%e!<%k(B: v1.2.1 $B0J9_(B
+    - Kpathsearch $BBP1~$N(B TeX $B$K4^$^$l$k(B kpsewhich $B%3%^%s%I(B
+    - pTeX $B$N(B pltotf, tftopl $B%3%^%s%I(B
 
-    upTeX ‚Ì pltotf, tftopl ƒRƒ}ƒ“ƒh‚ª—˜—p‚·‚é‚Æ ZVP ‚Å‚Ìƒ^ƒCƒvŽw’è‚É
-    ŠÖ‚·‚é§ŒÀ‚ª‚È‚­‚È‚éB
+    upTeX $B$N(B pltotf, tftopl $B%3%^%s%I$,MxMQ$9$k$H(B ZVP $B$G$N%?%$%W;XDj$K(B
+    $B4X$9$k@)8B$,$J$/$J$k!#(B
 
-¡ ƒCƒ“ƒXƒg[ƒ‹
+$B"#(B $B%$%s%9%H!<%k(B
 
-    ZRTeXtor.pm ‚Íˆê”Ê“I‚È Perl ƒ‚ƒWƒ…[ƒ‹‚Ìˆµ‚¢‚É]‚Á‚ÄŠÂ‹«•Ï” PERL5LIB
-    ‚ÅŽw’è‚µ‚½êŠ‚É’u‚¢‚Ä‚à‚æ‚¢‚ªApxutil.pl ‚Æ“¯‚¶ƒfƒBƒŒƒNƒgƒŠ‚É’u‚­‚±‚Æ
-    ‚à‰Â”\‚Å‚ ‚éB‘±‚¢‚ÄAÝ’èƒtƒ@ƒCƒ‹ ZRTeXtor.cfg ‚ðŽ©•ª‚ÌŠÂ‹«‚É‡‚¤‚æ‚¤
-    ‚É•ÒW‚µ‚½ŒãAZRTeXtor.pm ‚Æ“¯‚¶ƒfƒBƒŒƒNƒgƒŠ‚É’u‚­B
+    ZRTeXtor.pm $B$O0lHLE*$J(B Perl $B%b%8%e!<%k$N07$$$K=>$C$F4D6-JQ?t(B PERL5LIB
+    $B$G;XDj$7$?>l=j$KCV$$$F$b$h$$$,!"(Bpxutil.pl $B$HF1$8%G%#%l%/%H%j$KCV$/$3$H(B
+    $B$b2DG=$G$"$k!#B3$$$F!"@_Dj%U%!%$%k(B ZRTeXtor.cfg $B$r<+J,$N4D6-$K9g$&$h$&(B
+    $B$KJT=8$7$?8e!"(BZRTeXtor.pm $B$HF1$8%G%#%l%/%H%j$KCV$/!#(B
 
-    ‚±‚ÌƒvƒƒOƒ‰ƒ€‚ð "pxutil" ‚Å‹N“®‚Å‚«‚é‚É‚µ‚Ä‚¨‚­‚Æ•Ö—˜‚Å‚ ‚éBW32TeX
-    ‚ÌŠÂ‹«‚Å‚±‚ê‚ðs‚¤‚É‚ÍA$TEXMF/bin ‚É‚ ‚é runscr.exe ‚ð pxutil.exe ‚Ì
-    ‚Ì–¼‘O‚ÅƒRƒs[‚µA‚»‚ê‚Æ pxutil.pl ‚ðŽÀsƒpƒX‚Ì’Ê‚Á‚½êŠ‚É’u‚­B
+    $B$3$N%W%m%0%i%`$r(B "pxutil" $B$G5/F0$G$-$k$K$7$F$*$/$HJXMx$G$"$k!#(BW32TeX
+    $B$N4D6-$G$3$l$r9T$&$K$O!"(B$TEXMF/bin $B$K$"$k(B runscr.exe $B$r(B pxutil.exe $B$N(B
+    $B$NL>A0$G%3%T!<$7!"$=$l$H(B pxutil.pl $B$r<B9T%Q%9$NDL$C$?>l=j$KCV$/!#(B
 
 ----------------------------------------
 
-¡ TeX ‚ÌƒtƒHƒ“ƒgƒtƒ@ƒCƒ‹‚ÌŒ`Ž®
+$B"#(B TeX $B$N%U%)%s%H%U%!%$%k$N7A<0(B
 
-    Žg—p–@‚É‚Â‚¢‚Äq‚×‚é‘O‚ÉA‚±‚Ìƒ\ƒtƒgƒEƒFƒA‚ªˆµ‚¤ƒtƒ@ƒCƒ‹Œ`Ž®‚É‚Â‚¢‚Ä
-    à–¾‚µ‚Ä‚¨‚­B
+    $B;HMQK!$K$D$$$F=R$Y$kA0$K!"$3$N%=%U%H%&%'%"$,07$&%U%!%$%k7A<0$K$D$$$F(B
+    $B@bL@$7$F$*$/!#(B
 
-    EƒoƒCƒiƒŠŒ`Ž®
-      TeXA‚¨‚æ‚Ñ dvipdfmx “™‚Ì DVI ƒEƒFƒA‚ªŽÀÛ‚ÉŽg—p‚·‚éƒtƒ@ƒCƒ‹‚ÌŒ`Ž®
-      ‚Å‚ ‚éB
+    $B!&%P%$%J%j7A<0(B
+      TeX$B!"$*$h$S(B dvipdfmx $BEy$N(B DVI $B%&%'%"$,<B:]$K;HMQ$9$k%U%!%$%k$N7A<0(B
+      $B$G$"$k!#(B
 
-      TFM (‰¢•¶ TFM; Šg’£Žq .tfm)
-        ƒtƒHƒ“ƒg‚ÌƒƒgƒŠƒbƒNƒf[ƒ^‚ª‹LÚ‚³‚ê‚Ä‚¢‚éB
-      JFM (˜a•¶ TFM; Šg’£Žq .tfm)
-        ˜a•¶ƒtƒHƒ“ƒg‚Ìˆ×‚Ì TFM Œ`Ž®B
-      VF (Šg’£Žq .vf)
-        TeX ƒVƒXƒeƒ€‚ª—p‚¢‚é‰¼‘zƒtƒHƒ“ƒg‚ÌŒ`Ž®BŽÀÛ‚É‚ÍAVF ‚É‚Í•K‚¸‘Î‰ž
-        ‚·‚é TFM (ƒx[ƒX–¼‚ªˆê’v‚·‚é)‚ª‚ ‚èA‚±‚Ì 2 ‚Â‚ª‰¼‘zƒtƒHƒ“ƒg‚ð
-        \¬‚µ‚Ä‚¢‚éBVF Œ`Ž®‚Í‰¢•¶‚Æ˜a•¶‚Ì—¼•û‚Å—p‚¢‚ç‚ê‚éB
+      TFM ($B2$J8(B TFM; $B3HD%;R(B .tfm)
+        $B%U%)%s%H$N%a%H%j%C%/%G!<%?$,5-:\$5$l$F$$$k!#(B
+      JFM ($BOBJ8(B TFM; $B3HD%;R(B .tfm)
+        $BOBJ8%U%)%s%H$N0Y$N(B TFM $B7A<0!#(B
+      VF ($B3HD%;R(B .vf)
+        TeX $B%7%9%F%`$,MQ$$$k2>A[%U%)%s%H$N7A<0!#<B:]$K$O!"(BVF $B$K$OI,$:BP1~(B
+        $B$9$k(B TFM ($B%Y!<%9L>$,0lCW$9$k(B)$B$,$"$j!"$3$N(B 2 $B$D$,2>A[%U%)%s%H$r(B
+        $B9=@.$7$F$$$k!#(BVF $B7A<0$O2$J8$HOBJ8$NN>J}$GMQ$$$i$l$k!#(B
 
-    EƒeƒLƒXƒgŒ`Ž®
-      ã‹L‚ÌƒoƒCƒiƒŠŒ`Ž®‚Ìƒf[ƒ^‚ðlŠÔ‚ª“Ç‚ß‚é‚æ‚¤‚ÉƒeƒLƒXƒg‚Å•\‚µ‚½‚à‚ÌB
-      ƒeƒLƒXƒgŒ`Ž®‚ÆƒoƒCƒiƒŠŒ`Ž®‚ÌŠÔ‚Ì‘ŠŒÝ•ÏŠ·‚ð‚·‚éƒ\ƒtƒgƒEƒFƒA‚ª TeX
-      ƒVƒXƒeƒ€‚É‚Í—pˆÓ‚³‚ê‚Ä‚¢‚éB(*) ˆó‚ÍìŽÒ(ZR)‚ª’ñ¥‚·‚é“ÆŽ©‚ÌŒ`Ž®‚Å
-      ‚±‚ê‚ðˆµ‚¤‚Ì‚É pxutil ‚ª•K—v‚Å‚ ‚éB
+    $B!&%F%-%9%H7A<0(B
+      $B>e5-$N%P%$%J%j7A<0$N%G!<%?$r?M4V$,FI$a$k$h$&$K%F%-%9%H$GI=$7$?$b$N!#(B
+      $B%F%-%9%H7A<0$H%P%$%J%j7A<0$N4V$NAj8_JQ49$r$9$k%=%U%H%&%'%"$,(B TeX
+      $B%7%9%F%`$K$OMQ0U$5$l$F$$$k!#(B(*) $B0u$O:n<T(B(ZR)$B$,Ds>'$9$kFH<+$N7A<0$G(B
+      $B$3$l$r07$&$N$K(B pxutil $B$,I,MW$G$"$k!#(B
 
-      PL (Šg’£Žq .pl)
-        (‰¢•¶) TFM ‚É‘Î‰ž‚·‚éŒ`Ž®B
-      JPL (˜a•¶ PL; Šg’£Žq .pl)
-        JFM ‚É‘Î‰ž‚·‚éŒ`Ž®B
-      VPL (Šg’£Žq .vpl)
-        ‰¢•¶‰¼‘zƒtƒHƒ“ƒg(‰¢•¶ TFM ‚Æ VF ‚Ì‘g)‚É‘Î‰ž‚·‚éŒ`Ž®BŒ`Ž®‚Ì‘ŠŒÝ
-        •ÏŠ·‚Í•K‚¸ TFM ‚Æ VF ‚Æ‚Ì‘g‚ÌŠÔ‚Ås‚¤B
-      ZPL (Šg’£Žq .zpl) (*)
-        JPL ‚ð­‚µŠg’£‚µ‚½Œ`Ž®B‚â‚Í‚è JFM ‚Æ‘Î‰ž‚·‚éB
-      ZVP0 (Šg’£Žq .zvp0) (*)
-        VF ‚Æ’¼Ú‘Î‰ž‚·‚éŒ`Ž®BVPL ‚ÆˆÙ‚È‚èATFM ‚É‘Š“–‚·‚éƒf[ƒ^‚ðŽ‚Á‚Ä
-        ‚¢‚È‚¢B‚¾‚©‚ç‰¢•¶‚Æ˜a•¶‚Å‹¤’Ê‚µ‚Ä—p‚¢‚ç‚ê‚éB
-      ZVP (Šg’£Žq .zvp)
-        ˜a•¶‰¼‘zƒtƒHƒ“ƒg(JFM ‚Æ VF ‚Ì‘g)‚É‘Î‰ž‚·‚éŒ`Ž®BZPL ‚Æ ZVP0 ‚ð
-        “‡‚µ‚½Œ`‚ð‚à‚ÂB
+      PL ($B3HD%;R(B .pl)
+        ($B2$J8(B) TFM $B$KBP1~$9$k7A<0!#(B
+      JPL ($BOBJ8(B PL; $B3HD%;R(B .pl)
+        JFM $B$KBP1~$9$k7A<0!#(B
+      VPL ($B3HD%;R(B .vpl)
+        $B2$J82>A[%U%)%s%H(B($B2$J8(B TFM $B$H(B VF $B$NAH(B)$B$KBP1~$9$k7A<0!#7A<0$NAj8_(B
+        $BJQ49$OI,$:(B TFM $B$H(B VF $B$H$NAH$N4V$G9T$&!#(B
+      ZPL ($B3HD%;R(B .zpl) (*)
+        JPL $B$r>/$73HD%$7$?7A<0!#$d$O$j(B JFM $B$HBP1~$9$k!#(B
+      ZVP0 ($B3HD%;R(B .zvp0) (*)
+        VF $B$HD>@\BP1~$9$k7A<0!#(BVPL $B$H0[$J$j!"(BTFM $B$KAjEv$9$k%G!<%?$r;}$C$F(B
+        $B$$$J$$!#$@$+$i2$J8$HOBJ8$G6&DL$7$FMQ$$$i$l$k!#(B
+      ZVP ($B3HD%;R(B .zvp)
+        $BOBJ82>A[%U%)%s%H(B(JFM $B$H(B VF $B$NAH(B)$B$KBP1~$9$k7A<0!#(BZPL $B$H(B ZVP0 $B$r(B
+        $BE}9g$7$?7A$r$b$D!#(B
 
-¡ Žg—p–@
+$B"#(B $B;HMQK!(B
 
-    pxutil vf2zvp [<ƒIƒvƒVƒ‡ƒ“>] <“ü—Í.vf> [<“ü—Í.tfm> <o—Í.zvp>]
-      VF ‚Æ JFM ‚©‚ç ZVP ‚Ö•ÏŠ·B
-    pxutil zvp2vf [<ƒIƒvƒVƒ‡ƒ“>] <“ü—Í.zvp> [<o—Í.vf> <o—Í.tfm>]
-      ZVP ‚©‚ç VF ‚Æ JFM ‚Ö•ÏŠ·B
-    pxutil vf2zvp0 [<ƒIƒvƒVƒ‡ƒ“>] <“ü—Í.vf> [<o—Í.zvp0>]
-      VF ‚©‚ç ZVP0 ‚Ö•ÏŠ·B
-    pxutil zvp02vf [<ƒIƒvƒVƒ‡ƒ“>] <“ü—Í.zvp0> [<o—Í.vf>]
-      ZVP0 ‚©‚ç VF ‚Ö•ÏŠ·B
-    pxutil zpl2tfm [<ƒIƒvƒVƒ‡ƒ“>] <“ü—Í.zpl> [<o—Í.tfm>]
-      ZPL ‚©‚ç TFM ‚Ö•ÏŠ·B
-    pxutil tfm2zpl [<ƒIƒvƒVƒ‡ƒ“>] <“ü—Í.tfm> [<o—Í.zpl>]
-      TFM ‚©‚ç ZPL ‚Ö•ÏŠ·B
+    pxutil vf2zvp [<$B%*%W%7%g%s(B>] <$BF~NO(B.vf> [<$BF~NO(B.tfm> <$B=PNO(B.zvp>]
+      VF $B$H(B JFM $B$+$i(B ZVP $B$XJQ49!#(B
+    pxutil zvp2vf [<$B%*%W%7%g%s(B>] <$BF~NO(B.zvp> [<$B=PNO(B.vf> <$B=PNO(B.tfm>]
+      ZVP $B$+$i(B VF $B$H(B JFM $B$XJQ49!#(B
+    pxutil vf2zvp0 [<$B%*%W%7%g%s(B>] <$BF~NO(B.vf> [<$B=PNO(B.zvp0>]
+      VF $B$+$i(B ZVP0 $B$XJQ49!#(B
+    pxutil zvp02vf [<$B%*%W%7%g%s(B>] <$BF~NO(B.zvp0> [<$B=PNO(B.vf>]
+      ZVP0 $B$+$i(B VF $B$XJQ49!#(B
+    pxutil zpl2tfm [<$B%*%W%7%g%s(B>] <$BF~NO(B.zpl> [<$B=PNO(B.tfm>]
+      ZPL $B$+$i(B TFM $B$XJQ49!#(B
+    pxutil tfm2zpl [<$B%*%W%7%g%s(B>] <$BF~NO(B.tfm> [<$B=PNO(B.zpl>]
+      TFM $B$+$i(B ZPL $B$XJQ49!#(B
 
-    - TFM ‚Æ VF Œ`Ž®‚Ìƒtƒ@ƒCƒ‹‚ÍAkpathsearch ‚Ì’Tõ‚Ì‘ÎÛ‚Æ‚È‚éB
-    - o—Íƒtƒ@ƒCƒ‹–¼‚ðÈ—ª‚µ‚½ê‡‚ÍA“ü—Íƒtƒ@ƒCƒ‹‚ÌŠg’£Žq‚ð•ÏX‚µ‚½‚à‚Ì
-      ‚ªŽg‚í‚ê‚éBtftopl ‚Ì‚æ‚¤‚É•W€o—Í‚É‘‚«o‚·‚±‚Æ‚Í‚È‚¢B
+    - TFM $B$H(B VF $B7A<0$N%U%!%$%k$O!"(Bkpathsearch $B$NC5:w$NBP>]$H$J$k!#(B
+    - $B=PNO%U%!%$%kL>$r>JN,$7$?>l9g$O!"F~NO%U%!%$%k$N3HD%;R$rJQ99$7$?$b$N(B
+      $B$,;H$o$l$k!#(Btftopl $B$N$h$&$KI8=`=PNO$K=q$-=P$9$3$H$O$J$$!#(B
 
-¡ ƒIƒvƒVƒ‡ƒ“
+$B"#(B $B%*%W%7%g%s(B
 
-    Eo—Í®”’lŒ`Ž®‚Ì‘I‘ð
+    $B!&=PNO@0?tCM7A<0$NA*Br(B
 
-      ƒeƒLƒXƒgŒ`Ž®‚Ìƒtƒ@ƒCƒ‹‚ðo—Í‚·‚éŽž‚ÉA®”’l‚ÌŒ`Ž®‚Æ‚µ‚Ä 'H' (16i)
-      ‚Æ 'O' (8i) ‚ª‘I‘ð‚Å‚«‚é‰ÓŠ‚ª‚ ‚é(Žå‚É•¶ŽšƒR[ƒh‚ð•\‚·”’lB)
-      ‚±‚±‚Å‚Ç‚¿‚ç‚ÌŒ`Ž®‚ð—p‚¢‚é‚©‚ðŽw’è‚·‚éB
+      $B%F%-%9%H7A<0$N%U%!%$%k$r=PNO$9$k;~$K!"@0?tCM$N7A<0$H$7$F(B 'H' (16$B?J(B)
+      $B$H(B 'O' (8$B?J(B) $B$,A*Br$G$-$k2U=j$,$"$k(B($B<g$KJ8;z%3!<%I$rI=$9?tCM!#(B)
+      $B$3$3$G$I$A$i$N7A<0$rMQ$$$k$+$r;XDj$9$k!#(B
 
-      --hex  (Šù’è’l)
-        'H'(16i) Œ`Ž®‚ðŽw’è‚·‚éB
+      --hex  ($B4{DjCM(B)
+        'H'(16$B?J(B) $B7A<0$r;XDj$9$k!#(B
       --octal / -o
-        'O'(8i) Œ`Ž®‚ðŽw’è‚·‚éB
+        'O'(8$B?J(B) $B7A<0$r;XDj$9$k!#(B
 
-      ’ˆÓŽ–€:
-      - Œ`Ž®‚ª 'H' ‚© 'O' ‚Ìˆê•û‚ÉŒÅ’è‚³‚ê‚½‰ÓŠ‚à‚ ‚éB—á‚¦‚Î CHECKSUM
-        ‚Í•K‚¸ 'O' Œ`Ž®‚ð—p‚¢‚éB
-      - “ü—Í‚ÌÛ‚É‚ÍA˜_—“I‚É‰Â”\‚È‘S‚Ä‚ÌŒ`Ž®‚ªŽó—‚³‚ê‚éB'D'(10 i)‚Å
-        256 ˆÈã‚Ì’l‚ðŽw’è‚·‚é‚±‚Æ‚à‰Â”\B‚½‚¾‚µA“à•”‚Å pltotf ‚ðŒÄ‚Ño‚µ
-        ‚Ä‚¢‚éŠÖŒW‚ÅŒ`Ž®‚ª§ŒÀ‚³‚ê‚é‚±‚Æ‚à‚ ‚éB
+      $BCm0U;v9`(B:
+      - $B7A<0$,(B 'H' $B$+(B 'O' $B$N0lJ}$K8GDj$5$l$?2U=j$b$"$k!#Nc$($P(B CHECKSUM
+        $B$OI,$:(B 'O' $B7A<0$rMQ$$$k!#(B
+      - $BF~NO$N:]$K$O!"O@M}E*$K2DG=$JA4$F$N7A<0$,<uM}$5$l$k!#(B'D'(10 $B?J(B)$B$G(B
+        256 $B0J>e$NCM$r;XDj$9$k$3$H$b2DG=!#$?$@$7!"FbIt$G(B pltotf $B$r8F$S=P$7(B
+        $B$F$$$k4X78$G7A<0$,@)8B$5$l$k$3$H$b$"$k!#(B
 
-    EŠ¿ŽšƒR[ƒhŽw’è
+    $B!&4A;z%3!<%I;XDj(B
     
-      --kanji=<’l>
-        ŠO•”Š¿ŽšƒR[ƒh‚ðŽw’è‚·‚éB<’l>‚ÍˆÈ‰º‚Ì‚Æ‚¨‚èB
-        jis   ISO-2022-JP (Šù’è’l)
+      --kanji=<$BCM(B>
+        $B30It4A;z%3!<%I$r;XDj$9$k!#(B<$BCM(B>$B$O0J2<$N$H$*$j!#(B
+        jis   ISO-2022-JP ($B4{DjCM(B)
         sjis  Shift_JIS
         euc   EUC-JP
         utf8  UTF-8
-        none  –³Œø(Ú×‚ÍŒãq)
-      --kanji-internal=<’l>
-        “à•”Š¿ŽšƒR[ƒh‚ðŽw’è‚·‚éB<’l>‚ÍˆÈ‰º‚Ì‚Æ‚¨‚èB
-        jis     JIS X 0208 (Šù’è’l)
+        none  $BL58z(B($B>\:Y$O8e=R(B)
+      --kanji-internal=<$BCM(B>
+        $BFbIt4A;z%3!<%I$r;XDj$9$k!#(B<$BCM(B>$B$O0J2<$N$H$*$j!#(B
+        jis     JIS X 0208 ($B4{DjCM(B)
         unicode Unicode
-        none    –³Œø(Ú×‚ÍŒãq)
+        none    $BL58z(B($B>\:Y$O8e=R(B)
       --unicode / -u
-        --kanji=utf8 --kanji-internal=unicode ‚Æ“™‰¿BUnicode ˜a•¶
-        ƒtƒHƒ“ƒg‚ðˆµ‚¤ê‡‚ÌÝ’èB
+        --kanji=utf8 --kanji-internal=unicode $B$HEy2A!#(BUnicode $BOBJ8(B
+        $B%U%)%s%H$r07$&>l9g$N@_Dj!#(B
       --no-encoding / -E
-        --kanji=none --kanji-internal=none ‚Æ“™‰¿B
+        --kanji=none --kanji-internal=none $B$HEy2A!#(B
 
-      ƒeƒLƒXƒgŒ`Ž®‚Ìƒtƒ@ƒCƒ‹‚Åu•¶ŽšƒR[ƒh’l‚ÌŽw’è‚ð•¶Žš‚ð’¼Ú‘‚¢‚Äs‚¤
-      ê‡v‚ª‘¶Ý‚·‚éB—á‚¦‚ÎA®”’l‚Ì 'K' Œ`Ž®‚âAJPL ‚Ì CHARSINTYPE
-      ‚ÌŽw’è“™‚Å‚ ‚éBuŠO•”Š¿ŽšƒR[ƒhv‚ÍƒeƒLƒXƒgƒtƒ@ƒCƒ‹‚Ì•¶Žš‚ð“Ç‚Þ
-      ‚Ì‚ÉŽg‚í‚ê‚éŠ¿ŽšƒR[ƒh‚Å‚ ‚èAu“à•”Š¿ŽšƒR[ƒhv‚Í•¶Žš‚ðƒoƒCƒiƒŠ
-      Œ`Ž®‚Å—p‚¢‚éƒR[ƒh’l‚É•ÏŠ·‚·‚éŽž‚ÉŽg‚í‚ê‚éŠ¿ŽšƒR[ƒh‚Å‚ ‚éB
+      $B%F%-%9%H7A<0$N%U%!%$%k$G!VJ8;z%3!<%ICM$N;XDj$rJ8;z$rD>@\=q$$$F9T$&(B
+      $B>l9g!W$,B8:_$9$k!#Nc$($P!"@0?tCM$N(B 'K' $B7A<0$d!"(BJPL $B$N(B CHARSINTYPE
+      $B$N;XDjEy$G$"$k!#!V30It4A;z%3!<%I!W$O%F%-%9%H%U%!%$%k$NJ8;z$rFI$`(B
+      $B$N$K;H$o$l$k4A;z%3!<%I$G$"$j!"!VFbIt4A;z%3!<%I!W$OJ8;z$r%P%$%J%j(B
+      $B7A<0$GMQ$$$k%3!<%ICM$KJQ49$9$k;~$K;H$o$l$k4A;z%3!<%I$G$"$k!#(B
       
-      —á‚¦‚ÎA--kanji=sjis --kanji-internal=unicode ‚ÆÝ’è‚³‚ê‚Ä‚¢‚éê‡
-      ‚ðl‚¦‚éB‚±‚Ìê‡A'K' Œ`Ž®‚ðŠÜ‚ÞƒeƒLƒXƒgŒ`Ž®‚Ì“ü—Í‚ðˆµ‚¤‚É‚ÍA
-      ‚»‚Ìƒtƒ@ƒCƒ‹‚ÌŠ¿ŽšƒR[ƒh‚ð Shift_JIS ‚É‚·‚é•K—v‚ª‚ ‚éB‚»‚µ‚ÄA
-      'K ‚ ' ‚Æ‚¢‚¤®”’l‚ª‚ ‚Á‚½ê‡A<‚ > ‚Ì Unicode ’l‚Å‚ ‚é 0x3042
-      ‚ªŽw’è‚³‚ê‚½(‚Â‚Ü‚è 'H 3042' ‚Æ“™‰¿)‚Æ‚Ý‚È‚³‚ê‚éB
+      $BNc$($P!"(B--kanji=sjis --kanji-internal=unicode $B$H@_Dj$5$l$F$$$k>l9g(B
+      $B$r9M$($k!#$3$N>l9g!"(B'K' $B7A<0$r4^$`%F%-%9%H7A<0$NF~NO$r07$&$K$O!"(B
+      $B$=$N%U%!%$%k$N4A;z%3!<%I$r(B Shift_JIS $B$K$9$kI,MW$,$"$k!#$=$7$F!"(B
+      'K $B$"(B' $B$H$$$&@0?tCM$,$"$C$?>l9g!"(B<$B$"(B> $B$N(B Unicode $BCM$G$"$k(B 0x3042
+      $B$,;XDj$5$l$?(B($B$D$^$j(B 'H 3042' $B$HEy2A(B)$B$H$_$J$5$l$k!#(B
       
-      ‚±‚Ì‚æ‚¤‚ÉAŠ¿ŽšƒR[ƒh‚ÌŽw’è‚ªˆÓ–¡‚ð‚à‚Â‚Ì‚ÍAu•¶Žš‚Ì’¼ÚŽw’èv
-      ‚ð“ü—Í‚ÌƒeƒLƒXƒgŒ`Ž®—p‚¢‚éê‡‚ÉŒÀ‚ç‚ê‚éB(pxutil ‚Ío—Í’†‚Å•¶Žš
-      ‚Ì’¼ÚŽw’è‚ð—p‚¢‚é‚±‚Æ‚Í‚È‚¢B) --kanji ‚¨‚Æ‚Ñ --kanji-internal
-      ‚Ì’l none ‚Íu•¶Žš‚Ì’¼ÚŽw’èv‚ð–³Œø‚É‚·‚éÝ’è‚Å‚ ‚èA•Ð•û‚ª none
-      ‚ÉÝ’è‚µ‚Ä‚¢‚éê‡AŽ©“®“I‚É‘¼•û‚à none ‚É‚È‚é(‚Â‚Ü‚è --no-encoding
-      ‚Æ“¯‚¶)B‚±‚ÌŽw’è‚Ìê‡‚Éu•¶Žš‚Ì’¼ÚŽw’èv‚ðŽg‚¨‚¤‚Æ‚·‚é‚ÆƒGƒ‰[
-      ‚É‚È‚éB
+      $B$3$N$h$&$K!"4A;z%3!<%I$N;XDj$,0UL#$r$b$D$N$O!"!VJ8;z$ND>@\;XDj!W(B
+      $B$rF~NO$N%F%-%9%H7A<0MQ$$$k>l9g$K8B$i$l$k!#(B(pxutil $B$O=PNOCf$GJ8;z(B
+      $B$ND>@\;XDj$rMQ$$$k$3$H$O$J$$!#(B) --kanji $B$*$H$S(B --kanji-internal
+      $B$NCM(B none $B$O!VJ8;z$ND>@\;XDj!W$rL58z$K$9$k@_Dj$G$"$j!"JRJ}$,(B none
+      $B$K@_Dj$7$F$$$k>l9g!"<+F0E*$KB>J}$b(B none $B$K$J$k(B($B$D$^$j(B --no-encoding
+      $B$HF1$8(B)$B!#$3$N;XDj$N>l9g$K!VJ8;z$ND>@\;XDj!W$r;H$*$&$H$9$k$H%(%i!<(B
+      $B$K$J$k!#(B
 
-      ’ˆÓŽ–€:
-      - “–‘R‚È‚ª‚çA'K' ˆÈŠO‚Ì®”’lŒ`Ž®‚Í•¶ŽšƒR[ƒhŽw’è‚Ì‰e‹¿‚ðŽó‚¯‚È‚¢B
-        —á‚¦‚ÎA'H 3042' ‚Íí‚É”’l 0x3042 ‚ð•\‚·B
-      - JIS X 0208 ‚Æ Unicode ‚ÌŠÔ‚Ì•¶Žš‚Ì‘Î‰ž‚Í JIS X 0221 ‚Ì‹K’è‚É]‚¤B
-        ‚½‚¾ATeX ŠÖŒW‚Ìƒ\ƒtƒgƒEƒFƒA‚Å•Ê‚Ì•ûŽ®‚ð—p‚¢‚é‚à‚Ì‚à‚ ‚é‚Ì‚ÅA
-        —¼ŽÒ‚ÌŠÔ‚ÌƒR[ƒh•ÏŠ·‚Í”ð‚¯‚½•û‚ª–³“ï‚Å‚ ‚éB
+      $BCm0U;v9`(B:
+      - $BEvA3$J$,$i!"(B'K' $B0J30$N@0?tCM7A<0$OJ8;z%3!<%I;XDj$N1F6A$r<u$1$J$$!#(B
+        $BNc$($P!"(B'H 3042' $B$O>o$K?tCM(B 0x3042 $B$rI=$9!#(B
+      - JIS X 0208 $B$H(B Unicode $B$N4V$NJ8;z$NBP1~$O(B JIS X 0221 $B$N5,Dj$K=>$&!#(B
+        $B$?$@!"(BTeX $B4X78$N%=%U%H%&%'%"$GJL$NJ}<0$rMQ$$$k$b$N$b$"$k$N$G!"(B
+        $BN><T$N4V$N%3!<%IJQ49$OHr$1$?J}$,L5Fq$G$"$k!#(B
 
-¡ ZPL Œ`Ž®‚ÌŽd—l
+$B"#(B ZPL $B7A<0$N;EMM(B
 
-    EŠT—v
+    $B!&35MW(B
 
-      ZPL Œ`Ž®‚Í JPL Œ`Ž®‚ð­‚µ‚¾‚¯Šg’£‚µ‚½‚à‚Ì‚ÅAŒ³‚Ì JPL Œ`Ž®‚Æ“¯‚¶‚­
-      JFM Œ`Ž®‚É‘Î‰ž‚·‚éBŠJ”­ŒoˆÜ‚Ìã‚Å‚ÍAZVP Œ`Ž®‚Ì JFM ‚É‘Š“–‚·‚é•”•ª
-      ‚ð”²‚«o‚µ‚½‚à‚Ì‚É‘Š“–‚·‚éBˆÈ‰º‚Å‚ÍAJPL Œ`Ž®‚Æ‚Ì‘Šˆá“_‚Ì‚Ý‚ðà–¾
-      ‚·‚éB
+      ZPL $B7A<0$O(B JPL $B7A<0$r>/$7$@$13HD%$7$?$b$N$G!"85$N(B JPL $B7A<0$HF1$8$/(B
+      JFM $B7A<0$KBP1~$9$k!#3+H/7P0^$N>e$G$O!"(BZVP $B7A<0$N(B JFM $B$KAjEv$9$kItJ,(B
+      $B$rH4$-=P$7$?$b$N$KAjEv$9$k!#0J2<$G$O!"(BJPL $B7A<0$H$NAj0cE@$N$_$r@bL@(B
+      $B$9$k!#(B
 
-    ECHARSINTYPE ‚ÌŠg’£
+    $B!&(BCHARSINTYPE $B$N3HD%(B
 
-      (CHARSINTYPE <®”t> <•¶ŽšƒŠƒXƒg>)
-      CHARSINTYPE ‚Íã‹L‚Ì‘Ž®‚ð‚à‚¿ATYPE t ‚É‘®‚·‚é•¶ŽšƒR[ƒh‚ÌW‡‚ð
-      ‹K’è‚·‚é—v‘f‚Å‚ ‚éB<•¶ŽšƒŠƒXƒg> ‚Í 1 ‚ÂˆÈã‚Ìu•¶Žšv‚ð‹ó”’‚Å
-      ‹æØ‚Á‚Ä˜A‚Ë‚½‚à‚Ì‚ÅAu•¶Žšv‚ÍˆÈ‰º‚ÌŒ`Ž®‚ÅŽw’è‚Å‚«‚éB
+      (CHARSINTYPE <$B@0?t(Bt> <$BJ8;z%j%9%H(B>)
+      CHARSINTYPE $B$O>e5-$N=q<0$r$b$A!"(BTYPE t $B$KB0$9$kJ8;z%3!<%I$N=89g$r(B
+      $B5,Dj$9$kMWAG$G$"$k!#(B<$BJ8;z%j%9%H(B> $B$O(B 1 $B$D0J>e$N!VJ8;z!W$r6uGr$G(B
+      $B6h@Z$C$FO"$M$?$b$N$G!"!VJ8;z!W$O0J2<$N7A<0$G;XDj$G$-$k!#(B
 
-      •¶Žš‚ð’¼Ú‘‚­: ASCII ˆÈŠO‚Ì•¶Žš‚ð‘‚­‚ÆA®”’l‚Ì 'K' Œ`Ž®‚Æ“¯—l
-        ‚É‚»‚Ì•¶Žš‚Ì“à•”Š¿ŽšƒR[ƒh’l‚ðŽw’è‚µ‚½‚±‚Æ‚É‚È‚éBŠO•”‚¨‚æ‚Ñ“à•”
-        Š¿ŽšƒR[ƒh‚ÌÝ’è‚ÉˆË‘¶‚·‚éB
-      Jxxxx Œ`Ž®: 'J' ‚ÌŒã‚É 4 Œ…‚Ì 16 i”Žš‚ð‘‚¢‚½•¶Žš—ñ‚ÍA‚»‚Ì”Žš‚ª
-        •\‚·”’l‚ð JIS ƒR[ƒh’l‚Æ‚·‚é•¶Žš‚Ì“à•”Š¿ŽšƒR[ƒh’l‚ð•\‚·B
-      Uxxxx Œ`Ž®: 'U' ‚ÌŒã‚É 4 Œ…‚Ì 16 i”Žš‚ð‘‚¢‚½•¶Žš—ñ‚ÍA‚»‚Ì”Žš‚ª
-        •\‚·”’l‚ð Unicode ’l‚Æ‚·‚é•¶Žš‚Ì“à•”Š¿ŽšƒR[ƒh’l‚ð•\‚·B
-      Xxxxx Œ`Ž®: 'X' ‚ÌŒã‚É 4 Œ…‚Ì 16 i”Žš‚ð‘‚¢‚½•¶Žš—ñ‚ÍA‚»‚Ì”Žš‚ª
-        •\‚·”’l‚»‚Ì‚à‚Ì‚ð•\‚·B(“à•”Š¿ŽšƒR[ƒh‚ÌÝ’è‚Æ–³ŠÖŒWB)
-      PL ‚Ì®”’lŽw’è‚ÌŒ`Ž®: PL ‚Ì‘¼‚ÌêŠ‚ÅŽg‚í‚ê‚é 'H 1234' “™‚Ì‘Ž®‚ª
-        Žg‚¦A•\‚·”’l‚à“¯‚¶‚Å‚ ‚éB
-      CTRANGE —v‘f: ŽŸ‚Ì‘Ž®‚ð‚à‚¿Aa ˆÈã b ˆÈ‰º‚Ì‘S‚Ä‚Ì®”‚ð•\‚·B
-          (CTRANGE <®”a> <®”b>)
+      $BJ8;z$rD>@\=q$/(B: ASCII $B0J30$NJ8;z$r=q$/$H!"@0?tCM$N(B 'K' $B7A<0$HF1MM(B
+        $B$K$=$NJ8;z$NFbIt4A;z%3!<%ICM$r;XDj$7$?$3$H$K$J$k!#30It$*$h$SFbIt(B
+        $B4A;z%3!<%I$N@_Dj$K0MB8$9$k!#(B
+      Jxxxx $B7A<0(B: 'J' $B$N8e$K(B 4 $B7e$N(B 16 $B?J?t;z$r=q$$$?J8;zNs$O!"$=$N?t;z$,(B
+        $BI=$9?tCM$r(B JIS $B%3!<%ICM$H$9$kJ8;z$NFbIt4A;z%3!<%ICM$rI=$9!#(B
+      Uxxxx $B7A<0(B: 'U' $B$N8e$K(B 4 $B7e$N(B 16 $B?J?t;z$r=q$$$?J8;zNs$O!"$=$N?t;z$,(B
+        $BI=$9?tCM$r(B Unicode $BCM$H$9$kJ8;z$NFbIt4A;z%3!<%ICM$rI=$9!#(B
+      Xxxxx $B7A<0(B: 'X' $B$N8e$K(B 4 $B7e$N(B 16 $B?J?t;z$r=q$$$?J8;zNs$O!"$=$N?t;z$,(B
+        $BI=$9?tCM$=$N$b$N$rI=$9!#(B($BFbIt4A;z%3!<%I$N@_Dj$HL54X78!#(B)
+      PL $B$N@0?tCM;XDj$N7A<0(B: PL $B$NB>$N>l=j$G;H$o$l$k(B 'H 1234' $BEy$N=q<0$,(B
+        $B;H$(!"I=$9?tCM$bF1$8$G$"$k!#(B
+      CTRANGE $BMWAG(B: $B<!$N=q<0$r$b$A!"(Ba $B0J>e(B b $B0J2<$NA4$F$N@0?t$rI=$9!#(B
+          (CTRANGE <$B@0?t(Ba> <$B@0?t(Bb>)
           
-      —á: --kanji-internal=unicode ‚Ì‰º‚ÅA
-        (CHARSINTYPE D 2 ‚  J3021 D 200 U1234 X5678
+      $BNc(B: --kanji-internal=unicode $B$N2<$G!"(B
+        (CHARSINTYPE D 2 $B$"(B J3021 D 200 U1234 X5678
                          (CTRANGE H FF11 H FF13))
-      ‚Æ‚¢‚¤Žw’è‚Å Type 2 ‚ÉŽw’è‚³‚ê‚é•¶ŽšƒR[ƒh‚Í
-        0x3042 (<‚ > = Unicode 0x3042),
-        0x4E9C (JIS 0x3021 = <ˆŸ> = Unicode 0x4E9C), 0xC8 (= 200),
-        0x1234 ('U' ‚Í‚»‚Ì‚Ü‚Ü), 0x5678, 0xFF11, 0xFF12, 0xFF13
-      ‚Å‚ ‚éB
+      $B$H$$$&;XDj$G(B Type 2 $B$K;XDj$5$l$kJ8;z%3!<%I$O(B
+        0x3042 (<$B$"(B> = Unicode 0x3042),
+        0x4E9C (JIS 0x3021 = <$B0!(B> = Unicode 0x4E9C), 0xC8 (= 200),
+        0x1234 ('U' $B$O$=$N$^$^(B), 0x5678, 0xFF11, 0xFF12, 0xFF13
+      $B$G$"$k!#(B
 
-      ŽQl‚Ü‚Å‚ÉAJPL Œ`Ž®‚Æ”äŠr‚·‚é‚ÆˆÈ‰º‚Ì‚æ‚¤‚É‚È‚éBu`‚Ì JPLv‚Í
-      u`•t‘®‚Ì pltotf (ŽÀÛ‚ÌƒRƒ}ƒ“ƒh–¼‚ÍˆÙ‚È‚é‰Â”\«‚ ‚è)‚Åˆ—‚Å‚«‚é
-      JPL Œ`Ž®v‚ðŽw‚·BupTeX ‚É‚¨‚¢‚Ä JFM Œ`Ž®‚ÍŠg’£‚³‚ê‚Ä‚¨‚ç‚¸ pTeX
-      ‚Ì‚»‚ê‚Æ“¯‚¶Žd—l‚Å‚ ‚é‚±‚Æ‚É’ˆÓB
+      $B;29M$^$G$K!"(BJPL $B7A<0$HHf3S$9$k$H0J2<$N$h$&$K$J$k!#!V!A$N(B JPL$B!W$O(B
+      $B!V!AIUB0$N(B pltotf ($B<B:]$N%3%^%s%IL>$O0[$J$k2DG=@-$"$j(B)$B$G=hM}$G$-$k(B
+      JPL $B7A<0!W$r;X$9!#(BupTeX $B$K$*$$$F(B JFM $B7A<0$O3HD%$5$l$F$*$i$:(B pTeX
+      $B$N$=$l$HF1$8;EMM$G$"$k$3$H$KCm0U!#(B
 
-         ƒtƒ@ƒCƒ‹Œ`Ž®    ’¼Ú  Jxxxx  Uxxxx  ‚Ù‚©
-        pTeX ‚Ì JPL       ›    ›     ~     ~
-        upTeX ‚Ì JPL      ›    ›     ›     ~
-        ZPL               ›    ›     ›     ›
+         $B%U%!%$%k7A<0(B    $BD>@\(B  Jxxxx  Uxxxx  $B$[$+(B
+        pTeX $B$N(B JPL       $B!{(B    $B!{(B     $B!_(B     $B!_(B
+        upTeX $B$N(B JPL      $B!{(B    $B!{(B     $B!{(B     $B!_(B
+        ZPL               $B!{(B    $B!{(B     $B!{(B     $B!{(B
 
-¡ ZVP0 Œ`Ž®‚ÌŽd—l
+$B"#(B ZVP0 $B7A<0$N;EMM(B
 
-    EŠT—v
+    $B!&35MW(B
 
-      ZVP0 Œ`Ž®‚ÍAƒoƒCƒiƒŠ‚Ì VF Œ`Ž®‚É’¼Ú‘Î‰ž‚·‚éƒeƒLƒXƒgŒ`Ž®‚ÅAVPL
-      Œ`Ž®‚Ì‚¤‚¿‚Ì VF ‚É‹Lq‚³‚ê‚Ä‚¢‚é€–Ú‚¾‚¯‚ð”²‚«o‚µ‚½ŠiD‚ð‚µ‚Ä‚¢‚éB
-      ‹ï‘Ì“I‚É‚ÍAVPL ‚ÅŒ»‚ê‚é—v‘f‚Ì‚¤‚¿ŽŸ‚Ì‚à‚Ì‚©‚ç‚È‚éB
+      ZVP0 $B7A<0$O!"%P%$%J%j$N(B VF $B7A<0$KD>@\BP1~$9$k%F%-%9%H7A<0$G!"(BVPL
+      $B7A<0$N$&$A$N(B VF $B$K5-=R$5$l$F$$$k9`L\$@$1$rH4$-=P$7$?3J9%$r$7$F$$$k!#(B
+      $B6qBNE*$K$O!"(BVPL $B$G8=$l$kMWAG$N$&$A<!$N$b$N$+$i$J$k!#(B
 
         VTITLE
         DESIGNSIZE
@@ -241,23 +241,23 @@
         MAPFONT
         CHARACTER
 
-      ‚±‚Ì‚¤‚¿ACHARACTER ‚Ì’†‚Ì MAP ‚ÉŽáŠ±‚ÌŠg’£‚ðŠÜ‚ñ‚Å‚¢‚é‚Ì‚ÅA‚»‚ê
-      ‚É‚Â‚¢‚ÄˆÈ‰º‚Åà–¾‚·‚éBŽc‚è‚Ì—v‘f‚ÌŽd—l‚Í VPL ‚Æ“¯‚¶‚Å‚ ‚éB
+      $B$3$N$&$A!"(BCHARACTER $B$NCf$N(B MAP $B$K<c43$N3HD%$r4^$s$G$$$k$N$G!"$=$l(B
+      $B$K$D$$$F0J2<$G@bL@$9$k!#;D$j$NMWAG$N;EMM$O(B VPL $B$HF1$8$G$"$k!#(B
 
-    EMAP ’†‚Ì•¶Žšo—Í–½—ß‚É‘Î‚·‚éŠg’£
+    $B!&(BMAP $BCf$NJ8;z=PNOL?Na$KBP$9$k3HD%(B
     
-      MAP —v‘f‚ÍA‰¼‘zƒtƒHƒ“ƒg‚Ì 1 ‚Â‚Ì•¶Žš‚É‘Î‚µ‚ÄA‚»‚ê‚ð•\Œ»‚·‚é DVI
-      –½—ß‚Ì—ñ‚ðŽw’è‚·‚é‚à‚Ì‚Å‚ ‚éB‚±‚Ì’†‚ÅŽg‚í‚ê‚é SETCHAR —v‘f(DVI
-      ‚Ì setchar/set1`4 –½—ß‚Æ‘Î‰ž‚·‚é)‚ÍŽŸ‚Ì‘Ž®‚ð‚à‚¿Au•¶ŽšƒR[ƒh
-      c ‚Ì•¶Žš‚ðo—Í‚·‚év‚±‚Æ‚ðˆÓ–¡‚·‚éB
-        (SETCHAR <®” c>)
-      ZVP0 Œ`Ž®‚Å‚ÍˆÈ‰º‚Ì‚æ‚¤‚Èˆø”‚Ì‚È‚¢Œ`Ž®‚ª‹–‚³‚ê‚éB
+      MAP $BMWAG$O!"2>A[%U%)%s%H$N(B 1 $B$D$NJ8;z$KBP$7$F!"$=$l$rI=8=$9$k(B DVI
+      $BL?Na$NNs$r;XDj$9$k$b$N$G$"$k!#$3$NCf$G;H$o$l$k(B SETCHAR $BMWAG(B(DVI
+      $B$N(B setchar/set1$B!A(B4 $BL?Na$HBP1~$9$k(B)$B$O<!$N=q<0$r$b$A!"!VJ8;z%3!<%I(B
+      c $B$NJ8;z$r=PNO$9$k!W$3$H$r0UL#$9$k!#(B
+        (SETCHAR <$B@0?t(B c>)
+      ZVP0 $B7A<0$G$O0J2<$N$h$&$J0z?t$N$J$$7A<0$,5v$5$l$k!#(B
         (SETCHAR)
-      ‚±‚Ìê‡Ao—Í‚·‚é•¶Žš‚ÍAu“–ŠY‚Ì SETCHAR ‚ðŠÜ‚Þ CHARACTER —v‘f
-      ‚Ì‘ÎÛ‚Ì•¶Žšv‚É‚È‚éB
+      $B$3$N>l9g!"=PNO$9$kJ8;z$O!"!VEv3:$N(B SETCHAR $B$r4^$`(B CHARACTER $BMWAG(B
+      $B$NBP>]$NJ8;z!W$K$J$k!#(B
 
-      —á‚¦‚ÎAˆÈ‰º‚Ì‹Lq‚ÅA"(SETCHAR)" ‚Í "(SETCHAR H 2122)" ‚Æ“¯’l‚Æ
-      ‰ðŽß‚³‚ê‚éB
+      $BNc$($P!"0J2<$N5-=R$G!"(B"(SETCHAR)" $B$O(B "(SETCHAR H 2122)" $B$HF1CM$H(B
+      $B2r<a$5$l$k!#(B
 
         (CHARACTER H 2122
            (CHARWD R 0.5)
@@ -266,133 +266,133 @@
               )
            )
 
-¡ ZVP Œ`Ž®‚ÌŽd—l
+$B"#(B ZVP $B7A<0$N;EMM(B
 
-    EŠT—v
+    $B!&35MW(B
 
-      ZVP Œ`Ž®‚Í˜a•¶‚Ì‰¼‘zƒtƒHƒ“ƒg‚É‘Î‰ž‚·‚éƒeƒLƒXƒgŒ`Ž®‚ÅA
-         —v‘f             JFM VF
-        DIRECTION         ›  |
-        VTITLE            |  ›
-        FAMILY            ›  |
-        FACE              ›  |
-        HEADER            ›  |
-        CODINGSCHEME      ›  |
-        DESIGNUNITS       ›  |
-        DESIGNSIZE        ›  ›
-        CHECKSUM          ›  ›
-        SEVENBITSAFEFLAG  ›  |
-        FONTDIMEN         ›  |
-        BOUNDARYCHAR      ›  |
-        MAPFONT           |  ›
-        LIGTABLE          ›  |
-        GLUEKERN          ›  |
-        CODESPACE         |  ›  VÝ
-        CHARSINTYPE       ›  ›  Šg’£
-        CHARSINSUBTYPE    |  ›  VÝ
-        TYPE              ›  ›  Šg’£
-        SUBTYPE           |  ›  VÝ
-        CHARACTER         ›  ›  VÝ
+      ZVP $B7A<0$OOBJ8$N2>A[%U%)%s%H$KBP1~$9$k%F%-%9%H7A<0$G!"(B
+         $BMWAG(B             JFM VF
+        DIRECTION         $B!{(B  $B!](B
+        VTITLE            $B!](B  $B!{(B
+        FAMILY            $B!{(B  $B!](B
+        FACE              $B!{(B  $B!](B
+        HEADER            $B!{(B  $B!](B
+        CODINGSCHEME      $B!{(B  $B!](B
+        DESIGNUNITS       $B!{(B  $B!](B
+        DESIGNSIZE        $B!{(B  $B!{(B
+        CHECKSUM          $B!{(B  $B!{(B
+        SEVENBITSAFEFLAG  $B!{(B  $B!](B
+        FONTDIMEN         $B!{(B  $B!](B
+        BOUNDARYCHAR      $B!{(B  $B!](B
+        MAPFONT           $B!](B  $B!{(B
+        LIGTABLE          $B!{(B  $B!](B
+        GLUEKERN          $B!{(B  $B!](B
+        CODESPACE         $B!](B  $B!{(B  $B?7@_(B
+        CHARSINTYPE       $B!{(B  $B!{(B  $B3HD%(B
+        CHARSINSUBTYPE    $B!](B  $B!{(B  $B?7@_(B
+        TYPE              $B!{(B  $B!{(B  $B3HD%(B
+        SUBTYPE           $B!](B  $B!{(B  $B?7@_(B
+        CHARACTER         $B!{(B  $B!{(B  $B?7@_(B
 
-      ˆÈ‰º‚ÅAVÝ‚Ü‚½‚ÍŠg’£‚³‚ê‚½—v‘f‚Ìà–¾‚ðs‚¤‚ªA‚»‚Ì‘O‚ÉV‚½‚É“±“ü
-      ‚³‚ê‚½ŠT”O‚É‚Â‚¢‚Äà–¾‚·‚éB
+      $B0J2<$G!"?7@_$^$?$O3HD%$5$l$?MWAG$N@bL@$r9T$&$,!"$=$NA0$K?7$?$KF3F~(B
+      $B$5$l$?35G0$K$D$$$F@bL@$9$k!#(B
 
-    ESubtype
+    $B!&(BSubtype
 
-      ZVP0 Œ`Ž®‚Ì‚Æ‚±‚ë‚Åà–¾‚µ‚½ SETFONT ‚ÌŠg’£‘Ž®‚ðŽg‚¤‚ÆA‘S‚­“¯ˆê‚Ì
-      MAP Žw’è‚ð‚à‚Â•¶Žš‚ª‘½‚­o‚é‚±‚Æ‚É‚È‚éB—á‚¦‚ÎAÅ‚à•p”É‚É”­¶‚·‚é
-      uŠù’è‚ÌƒtƒHƒ“ƒg‚É‚Â‚¢‚Ä—v‹‚³‚ê‚½•¶Žš‚ðo‚·v‚Æ‚¢‚¤‚Ì‚Í
+      ZVP0 $B7A<0$N$H$3$m$G@bL@$7$?(B SETFONT $B$N3HD%=q<0$r;H$&$H!"A4$/F10l$N(B
+      MAP $B;XDj$r$b$DJ8;z$,B?$/=P$k$3$H$K$J$k!#Nc$($P!":G$bIQHK$KH/@8$9$k(B
+      $B!V4{Dj$N%U%)%s%H$K$D$$$FMW5a$5$l$?J8;z$r=P$9!W$H$$$&$N$O(B
         (MAP (SETCHAR) )
-      ‚Æ•\‚·‚±‚Æ‚ª‚Å‚«‚éB‚»‚±‚ÅA1 ‚Â‚Ì Type ‚Ì’†‚Å“¯ˆê‚Ì MAP Žw’è‚ð‚à‚Â
-      •¶Žš‚ð Subtype ‚Æ‚µ‚Ä‚Ü‚Æ‚ß‚é‚±‚Æ‚É‚·‚éB‚·‚È‚í‚¿AType ‚ª“¯‚¶‚Å
-      Subtype ‚ªˆÙ‚È‚é•¶Žš‚ÍAJFM ‚Å‚Í‘S‚­“¯‚¶U‚é•‘‚¢‚ð‚·‚é(‚Â‚Ü‚è“¯‚¶
-      ƒƒgƒŠƒbƒN‚ðŽ‚¿ GLUEKERN ‚Å‚Ìˆµ‚¢‚à“¯‚¶)‚ªAMAP Žw’è‚¾‚¯‚ªˆÙ‚È‚éB
-      ‚±‚¤‚·‚é‚±‚Æ‚ÅAVPL ‚Å‚Ì CHARACTER ‚ÌŽw’è‚ð Subtype –ˆ‚É‚Ü‚Æ‚ß‚Ä
-      s‚¤‚±‚Æ‚ª‚Å‚«‚é‚æ‚¤‚É‚È‚éB
+      $B$HI=$9$3$H$,$G$-$k!#$=$3$G!"(B1 $B$D$N(B Type $B$NCf$GF10l$N(B MAP $B;XDj$r$b$D(B
+      $BJ8;z$r(B Subtype $B$H$7$F$^$H$a$k$3$H$K$9$k!#$9$J$o$A!"(BType $B$,F1$8$G(B
+      Subtype $B$,0[$J$kJ8;z$O!"(BJFM $B$G$OA4$/F1$8?6$kIq$$$r$9$k(B($B$D$^$jF1$8(B
+      $B%a%H%j%C%/$r;}$A(B GLUEKERN $B$G$N07$$$bF1$8(B)$B$,!"(BMAP $B;XDj$@$1$,0[$J$k!#(B
+      $B$3$&$9$k$3$H$G!"(BVPL $B$G$N(B CHARACTER $B$N;XDj$r(B Subtype $BKh$K$^$H$a$F(B
+      $B9T$&$3$H$,$G$-$k$h$&$K$J$k!#(B
       
-      ‚È‚¨ASubtype ‚Í ZVP ‚Ì’†‚¾‚¯‚É‘¶Ý‚·‚éŠT”O‚ÅA‚»‚Ì’l‚Í JFM ‚â VF
-      ‚Ì’†‚Ì‚Ç‚Ìî•ñ‚Æ‚à‘Î‰ž‚µ‚È‚¢BMAP Žw’è‚ª“¯‚¶‚à‚Ì‚Í“¯‚¶ Subtype ’l
-      ‚ðŽ‚Â‚Æ‚¢‚¤“_‚¾‚¯‚ÉˆÓ–¡‚ª‚ ‚éBSubtype ‚Ì—LŒø‚È’l‚Í 0`255 ‚Å‚ ‚éB
+      $B$J$*!"(BSubtype $B$O(B ZVP $B$NCf$@$1$KB8:_$9$k35G0$G!"$=$NCM$O(B JFM $B$d(B VF
+      $B$NCf$N$I$N>pJs$H$bBP1~$7$J$$!#(BMAP $B;XDj$,F1$8$b$N$OF1$8(B Subtype $BCM(B
+      $B$r;}$D$H$$$&E@$@$1$K0UL#$,$"$k!#(BSubtype $B$NM-8z$JCM$O(B 0$B!A(B255 $B$G$"$k!#(B
 
-    EƒR[ƒh‹óŠÔ
+    $B!&%3!<%I6u4V(B
 
-      JPL (JFM ‚Å‚Ì“¯—l)‚Å‚ÍAType ‚ª 0 ˆÈŠO‚Ì•¶Žš‚ð—ñ‹“‚µ‚ÄA‚»‚êˆÈŠO‚Ì
-      •¶Žš‚ð Type 0 ‚Ì•¶Žš‚Æˆµ‚Á‚Ä‚¢‚éB]‚Á‚ÄA‚»‚ÌƒtƒHƒ“ƒg‚É‚¨‚¢‚Ä‚Ç‚Ì
-      ƒR[ƒh‚ª—LŒø‚©‚Æ‚¢‚¤‚±‚Æ‚Í–¾Ž¦‚³‚ê‚Ä‚¢‚È‚¢B‚±‚ê‚É‘Î‚µ‚ÄAVPL (VF)
-      ‚Å‚Í‰¼‘zƒtƒHƒ“ƒg‚Å—LŒø‚È•¶Žš‚Ì‘S‚Ä‚É‚Â‚¢‚Ä CHARACTER —v‘f‚ª•K—v‚Æ
-      ‚³‚ê‚éB]‚Á‚ÄAã‚Åq‚×‚½‚æ‚¤‚É Type ‚Æ Subtype ‚ð—p‚¢‚Ä CHARACTER
-      ‚ðˆêŠ‡Žw’è‚µ‚æ‚¤‚Æ‚·‚é‚ÆA—LŒø‚È•¶Žš‚ÌW‡(ƒR[ƒh‹óŠÔ)‚Ìî•ñ‚ª•K—v
-      ‚Æ‚È‚éB
+      JPL (JFM $B$G$NF1MM(B)$B$G$O!"(BType $B$,(B 0 $B0J30$NJ8;z$rNs5s$7$F!"$=$l0J30$N(B
+      $BJ8;z$r(B Type 0 $B$NJ8;z$H07$C$F$$$k!#=>$C$F!"$=$N%U%)%s%H$K$*$$$F$I$N(B
+      $B%3!<%I$,M-8z$+$H$$$&$3$H$OL@<($5$l$F$$$J$$!#$3$l$KBP$7$F!"(BVPL (VF)
+      $B$G$O2>A[%U%)%s%H$GM-8z$JJ8;z$NA4$F$K$D$$$F(B CHARACTER $BMWAG$,I,MW$H(B
+      $B$5$l$k!#=>$C$F!">e$G=R$Y$?$h$&$K(B Type $B$H(B Subtype $B$rMQ$$$F(B CHARACTER
+      $B$r0l3g;XDj$7$h$&$H$9$k$H!"M-8z$JJ8;z$N=89g(B($B%3!<%I6u4V(B)$B$N>pJs$,I,MW(B
+      $B$H$J$k!#(B
 
-      ˆø‚«‘±‚¢‚ÄAVÝ‚Ü‚½‚ÍŠg’£‚³‚ê‚½—v‘f‚Ìà–¾‚ðs‚¤B
+      $B0z$-B3$$$F!"?7@_$^$?$O3HD%$5$l$?MWAG$N@bL@$r9T$&!#(B
 
-    E(CODESPACE <•¶ŽšƒŠƒXƒg>)
-      (CODESPACE <ƒR[ƒh‹óŠÔŽ¯•ÊŽq>)
+    $B!&(B(CODESPACE <$BJ8;z%j%9%H(B>)
+      (CODESPACE <$B%3!<%I6u4V<1JL;R(B>)
     
-      ƒR[ƒh‹óŠÔ‚ðŽw’è‚·‚éB<•¶ŽšƒŠƒXƒg> ‚Ì‘Ž®‚Í ZPL ‚Ì CHARSINTYPE ‚Æ
-      “¯‚¶B“Á’è‚ÌƒR[ƒh‹óŠÔ‚ÌÝ’è‚É‘Î‚µ‚Ä‚Í‰º‹L‚Ì <ƒR[ƒh‹óŠÔŽ¯•ÊŽq>
-      ‚É‚æ‚éŽw’è‚à‰Â”\‚Å‚ ‚éB
-        - GL94DB: ãˆÊƒoƒCƒgA‰ºˆÊƒoƒCƒg‚Æ‚à‚É 0x21`0x7E ‚Ì 2 ƒoƒCƒg’l
-          ‘S‘ÌBpTeX ‚Ì˜a•¶ƒtƒHƒ“ƒg‚Å’ÊíŽg‚í‚ê‚éÝ’èB(CODESPACE ‚Ì
-          Šù’è’l‚Í‚±‚ê‚Å‚ ‚é)
-        - UNICODE-BMP: 0`0xFFFFBUnicode ‚Ì BMP ‚Ì‘S‘ÌB
+      $B%3!<%I6u4V$r;XDj$9$k!#(B<$BJ8;z%j%9%H(B> $B$N=q<0$O(B ZPL $B$N(B CHARSINTYPE $B$H(B
+      $BF1$8!#FCDj$N%3!<%I6u4V$N@_Dj$KBP$7$F$O2<5-$N(B <$B%3!<%I6u4V<1JL;R(B>
+      $B$K$h$k;XDj$b2DG=$G$"$k!#(B
+        - GL94DB: $B>e0L%P%$%H!"2<0L%P%$%H$H$b$K(B 0x21$B!A(B0x7E $B$N(B 2 $B%P%$%HCM(B
+          $BA4BN!#(BpTeX $B$NOBJ8%U%)%s%H$GDL>o;H$o$l$k@_Dj!#(B(CODESPACE $B$N(B
+          $B4{DjCM$O$3$l$G$"$k(B)
+        - UNICODE-BMP: 0$B!A(B0xFFFF$B!#(BUnicode $B$N(B BMP $B$NA4BN!#(B
 
-    E(CHARSINTYPE <®”t> <•¶ŽšƒŠƒXƒg>)
+    $B!&(B(CHARSINTYPE <$B@0?t(Bt> <$BJ8;z%j%9%H(B>)
 
-      Type t ‚Ì•¶Žš‚ÌW‡‚ðŽw’è‚·‚éBt ‚Í 1`255 ‚Ì®”B
+      Type t $B$NJ8;z$N=89g$r;XDj$9$k!#(Bt $B$O(B 1$B!A(B255 $B$N@0?t!#(B
 
-    E(CHARSINSUBTYPE <®”t> <®”s> <•¶ŽšƒŠƒXƒg>)
+    $B!&(B(CHARSINSUBTYPE <$B@0?t(Bt> <$B@0?t(Bs> <$BJ8;z%j%9%H(B>)
 
-      Type tASubtype s ‚Ì•¶Žš‚ÌW‡‚ðŽw’è‚·‚éBt ‚Í 0`255 ‚Ì®”B
-      s ‚Í 1`255 ‚Ì®”B
+      Type t$B!"(BSubtype s $B$NJ8;z$N=89g$r;XDj$9$k!#(Bt $B$O(B 0$B!A(B255 $B$N@0?t!#(B
+      s $B$O(B 1$B!A(B255 $B$N@0?t!#(B
 
-    E(TYPE <®”t> <—v‘f>...)
+    $B!&(B(TYPE <$B@0?t(Bt> <$BMWAG(B>...)
 
-      Type t ‚Ì•¶Žš‚É‘Î‚·‚éî•ñ‚ð‹Lq‚·‚éBt ‚Í 0`255 ‚Ì®”B
+      Type t $B$NJ8;z$KBP$9$k>pJs$r5-=R$9$k!#(Bt $B$O(B 0$B!A(B255 $B$N@0?t!#(B
       
-      —v‘f‚Æ‚µ‚ÄˆÈ‰º‚Ì‚à‚Ì‚ªŽw’è‚Å‚«‚éB
-        - CHARWD, CHARHT, CHARDP, CHARIC : ‚±‚ê‚Í Type t ‚Ì•¶Žš‘S‘Ì‚É
-          ‘Î‚µ‚Ä“K—p‚³‚ê‚éB
-        - MAP : ‚±‚ê‚Í Type tASubtype 0 ‚Ì•¶Žš‚É“K—p‚³‚ê‚éB
+      $BMWAG$H$7$F0J2<$N$b$N$,;XDj$G$-$k!#(B
+        - CHARWD, CHARHT, CHARDP, CHARIC : $B$3$l$O(B Type t $B$NJ8;zA4BN$K(B
+          $BBP$7$FE,MQ$5$l$k!#(B
+        - MAP : $B$3$l$O(B Type t$B!"(BSubtype 0 $B$NJ8;z$KE,MQ$5$l$k!#(B
 
-    E(SUBTYPE <®”t> <®”s> <MAP—v‘f>)
+    $B!&(B(SUBTYPE <$B@0?t(Bt> <$B@0?t(Bs> <MAP$BMWAG(B>)
 
-      Type tASubtype ‚Ì•¶Žš‚É‘Î‚·‚é MAP ‚ð‹Lq‚·‚éBt ‚Í 0`255 ‚Ì®”B
-      s ‚Í 1`255 ‚Ì®”B
+      Type t$B!"(BSubtype $B$NJ8;z$KBP$9$k(B MAP $B$r5-=R$9$k!#(Bt $B$O(B 0$B!A(B255 $B$N@0?t!#(B
+      s $B$O(B 1$B!A(B255 $B$N@0?t!#(B
 
-    E(CHARACTER <®”c> <MAP—v‘f>)
+    $B!&(B(CHARACTER <$B@0?t(Bc> <MAP$BMWAG(B>)
 
-      ƒR[ƒh’l c ‚Ì•¶Žš‚É‘Î‚·‚é MAP ‚ð‹Lq‚·‚éB•¶Žš c ‚Ì Type ‚Í‚±‚Ì
-      —v‘f‚Ì‹Lq‚É‰e‹¿‚µ‚È‚¢B(‚Â‚Ü‚èACHARSINTYPE ‚ÅŽw’è‚µ‚½’lA‚Ç‚±‚É
-      ‚à‚È‚¢ê‡‚Í 0Bj•¶Žš c ‚¾‚¯‚©‚ç‚È‚é Subtype ‚ð‰¼‘z“I‚Éì‚Á‚½‚Ì
-      ‚Æ“¯‚¶‚Å‚ ‚éB
+      $B%3!<%ICM(B c $B$NJ8;z$KBP$9$k(B MAP $B$r5-=R$9$k!#J8;z(B c $B$N(B Type $B$O$3$N(B
+      $BMWAG$N5-=R$K1F6A$7$J$$!#(B($B$D$^$j!"(BCHARSINTYPE $B$G;XDj$7$?CM!"$I$3$K(B
+      $B$b$J$$>l9g$O(B 0$B!#!KJ8;z(B c $B$@$1$+$i$J$k(B Subtype $B$r2>A[E*$K:n$C$?$N(B
+      $B$HF1$8$G$"$k!#(B
 
-      Še Subtype ‚Ì•¶Žš‚Ìî•ñ‚ª‚Ç‚±‚É‚ ‚é‚©‚ð‚Ü‚Æ‚ß‚½BˆÈ‰º‚Ì•\‚ÅAt ‚Í
-      0 ˆÈŠO‚Ì TypeAs ‚Í 0 ˆÈŠO‚Ì Subtype ‚ð•\‚·B”ÏŽG‚È‚æ‚¤‚ÉŒ©‚¦‚é‚ªA
-      u–{‘¥‚ð Type/Subtype 0 ‚É‘‚«A—áŠO‚ð‚»‚êˆÈŠO‚É‘‚­v‚Æ‚¢‚¤ÝŒv
-      ã‚±‚Ì‚æ‚¤‚ÈŒ‹‰Ê‚É‚È‚Á‚Ä‚¢‚éB‚±‚ê‚É‚æ‚èA•¶ŽšƒŠƒXƒg‚ð‘‚­‚Æ‚«‚É
-      CTRANGE ‚ªÅ‘åŒÀŠˆ—p‚Å‚«‚é‚æ‚¤‚É‚È‚èA‚Ü‚½]—ˆ‚Ì JPL ‚©‚ç‚Ì•ÏX“_
-      ‚ªÅ¬ŒÀ‚É‚È‚é‚Æl‚¦‚Ä‚¢‚éB
+      $B3F(B Subtype $B$NJ8;z$N>pJs$,$I$3$K$"$k$+$r$^$H$a$?!#0J2<$NI=$G!"(Bt $B$O(B
+      0 $B0J30$N(B Type$B!"(Bs $B$O(B 0 $B0J30$N(B Subtype $B$rI=$9!#HQ;($J$h$&$K8+$($k$,!"(B
+      $B!VK\B'$r(B Type/Subtype 0 $B$K=q$-!"Nc30$r$=$l0J30$K=q$/!W$H$$$&@_7W(B
+      $B>e$3$N$h$&$J7k2L$K$J$C$F$$$k!#$3$l$K$h$j!"J8;z%j%9%H$r=q$/$H$-$K(B
+      CTRANGE $B$,:GBg8B3hMQ$G$-$k$h$&$K$J$j!"$^$?=>Mh$N(B JPL $B$+$i$NJQ99E@(B
+      $B$,:G>.8B$K$J$k$H9M$($F$$$k!#(B
 
-      Type Subtype   •¶ŽšW‡              ƒƒgƒŠƒbƒN  MAPŽw’è
-        0    0  (CODESPACE)‚©‚ç             (TYPE 0)  (TYPE 0)
-                ‘S‚Ä‚Ì(CHARSINTYPE t)‚Æ
-                ‘S‚Ä‚Ì(CHARSINSUBTYPE 0 s)
-                ‚ðœ‚¢‚½‚à‚Ì
+      Type Subtype   $BJ8;z=89g(B              $B%a%H%j%C%/(B  MAP$B;XDj(B
+        0    0  (CODESPACE)$B$+$i(B             (TYPE 0)  (TYPE 0)
+                $BA4$F$N(B(CHARSINTYPE t)$B$H(B
+                $BA4$F$N(B(CHARSINSUBTYPE 0 s)
+                $B$r=|$$$?$b$N(B
         0    s  (CHARSINSUBTYPE 0 s)        (TYPE 0)  (SUBTYPE 0 s)
-        t    0  (CHARSINTYPE t)‚©‚ç         (TYPE t)  (TYPE t)
-                ‘S‚Ä‚Ì(CHARSINSUBTYPE t s)
-                ‚ðœ‚¢‚½‚à‚ÌB
+        t    0  (CHARSINTYPE t)$B$+$i(B         (TYPE t)  (TYPE t)
+                $BA4$F$N(B(CHARSINSUBTYPE t s)
+                $B$r=|$$$?$b$N!#(B
         t    s  (CHARSINSUBTYPE t s)        (TYPE t)  (SUBTYPE t s)
 
 ----------------------------------------
 
-¡ XV—š—ð
+$B"#(B $B99?7MzNr(B
 
     Version 0.6.2 <2009/06/07>
-    ZVP Œ`Ž®‚ð’è‹`A‚»‚ê‚ðˆµ‚¤‹@”\‚ð’Ç‰ÁB
+    ZVP $B7A<0$rDj5A!"$=$l$r07$&5!G=$rDI2C!#(B
 
     Version 0.52 <2008/06/28>
-    Å‰‚ÌŒöŠJ”ÅB
+    $B:G=i$N8x3+HG!#(B
 
 # EOF
