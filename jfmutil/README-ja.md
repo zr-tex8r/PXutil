@@ -1,10 +1,12 @@
-PXutil バンドル
-===============
+jfmutil
+=======
 
-日本語 TeX 関連のデータファイルを操作する種々の機能を提供するツールである。
-現在のところ、次の機能が利用できる。
+Perl： pTeX の TFM/VF を操作するユーティリティ
 
-  - 和文の仮想フォント(VF と JFM の組)に対応する独自仕様のテキスト形式で
+(u)pTeX の論理フォントに関するデータファイル（JFM および VF）を操作する
+種々の機能を提供するツールである。現在のところ、次の機能が利用できる。
+
+  - 和文の仮想フォント（VF・JFM の組）に対応する独自仕様のテキスト形式で
     ある「ZVP 形式」と仮想フォントとの間の相互変換。今まで、和文 VF の
     生成・編集はそれに対応するテキスト形式がなかったため非常に面倒で
     あった。ZVP 形式を使うことで、和文 VF の新規作成や編集が容易になる
@@ -12,38 +14,28 @@ PXutil バンドル
   - ZVP 中の VF に直接対応する部分を抜き出した「ZVP0 形式」と VF (和文/
     欧文)との間の相互変換。
 
-このプログラムを実行する為には、別途 ZRTeXtor モジュールを用意する必要が
-ある。下記のサイトから入手可能。
-
-### 本ソフトウェアの作者のサイト
-
-  - En toi Pythmeni tes TeXnopoleos ～電脳世界の奥底にて～  
-    <http://zrbabbler.sp.land.to/>
-
-  - パッケージを用いた和文仮想フォントの改変の方法が以下のページで解説
-    されている。  
-    <http://zrbabbler.sp.land.to/pxutil.html>
-
 ### 前提環境
 
   - Perl 処理系: v5.8.1 以降
-  - ZRTeXtor モジュール: v1.2.1 以降
-  - Kpathsearch 対応の TeX に含まれる kpsewhich コマンド
-  - pTeX の pltotf, tftopl コマンド
+  - pTeX の配布に含まれる以下のコマンド
+      - kpsewhich
+      - pltotf, tftopl
 
-※upTeX の pltotf, tftopl コマンドが利用すると ZVP でのタイプ指定に
-関する制限がなくなる。
+### pxutil との関係
 
-### インストール
+jfmutil の機能は pxutil と等価である。pxutil の動作のためには ZRTeXtor
+モジュールを別途インストールする必要があった。CTAN に登録するにあたって
+単体で動作するプログラムの方がよいと考え、pxutil に ZRTeXtor のコードの
+一部を併合したものがこの jfmutil である。
 
-ZRTeXtor.pm は一般的な Perl モジュールの扱いに従って環境変数 PERL5LIB
-で指定した場所に置いてもよいが、pxutil.pl と同じディレクトリに置くこと
-も可能である。続いて、設定ファイル ZRTeXtor.cfg を自分の環境に合うよう
-に編集した後、ZRTeXtor.pm と同じディレクトリに置く。
+jfmutil と pxutil の相違点は次のとおりである：
 
-このプログラムを "pxutil" で起動できるにしておくと便利である。W32TeX
-の環境でこれを行うには、$TEXMF/bin にある runscr.exe を pxutil.exe の
-の名前でコピーし、それと pxutil.pl を実行パスの通った場所に置く。
+  - jfmutil は ZRTeXtor の設定ファイル（`ZRTeXtor.cfg`）を参照しない。
+    設定対象の値は全て既定値が使われる。
+  - ただし、漢字コードは外部・内部ともに“無効”(`none`）を指定している。
+    このため、`-E` オプション指定が既定の状態となる。
+  - なお、ZRTeXtor の 1.4.0 版より、設定項目 `tftopl`/`pltotf` の既定値は
+    `ptftopl`/`ppltotf` となっている。
 
 ### ライセンス
 
@@ -401,17 +393,9 @@ MIT ライセンス
 --------
 
   * Version 1.0.0 〈2017/07/17〉
-      - 簡易版の“jfmutil”を作成した。
-
-  * Version 0.6.3 〈2016/04/03〉
-      - ドキュメントとバージョン番号（だけ）を更新。
-
-  * Version 0.6.2 〈2009/06/07〉
-      - ZVP 形式を定義、それを扱う機能を追加。
-
-  * Version 0.52 〈2008/06/28〉
-      - 最初の公開版。
+      - （jfmutil として）最初の公開版。
+      - ZRTeXtor は v1.4.0 相当。
 
 --------------------
 Takayuki YATO (aka. "ZR")  
-http://zrbabbler.sp.land.to/
+https://github.com/zr-tex8r
