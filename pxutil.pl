@@ -6,8 +6,8 @@ BEGIN { $_ = $0; s|^(.*)/.*$|$1|; unshift(@INC, $_); }
 use ZRTeXtor ':all';
 use Encode qw(encode decode);
 my $prog_name = 'pxutil';
-my $version = '1.0.0';
-my $mod_date = '2017/07/17';
+my $version = '1.0.1';
+my $mod_date = '2017/07/21';
 #use Data::Dump 'dump';
 #
 my ($sw_hex, $sw_uptool, $sw_noencout, $inenc, $exenc);

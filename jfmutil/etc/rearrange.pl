@@ -58,11 +58,12 @@ my ($pxutil, $ZRTeXtor, $ZRTeXtor_version);
   s/##pxutil##/$pxutil/;
   s/pxutil/jfmutil/g;
   open(my $ho, '>', $output_file) or die "Cannot open '$output_file'";
-  print $ho ($_);
+  binmode($ho); print $ho ($_);
   close($ho);
 }
 
 __DATA__
+#!/usr/bin/env perl
 #
 # This is file 'jfmutil.pl'.
 #

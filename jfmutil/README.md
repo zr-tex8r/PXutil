@@ -51,6 +51,9 @@ Please refer to README-ja.md (in Japanese) for detail.
 Revision History
 ----------------
 
+  * Version 1.0.1 〈2017/07/21〉
+      - Add shebang line.
+
   * Version 1.0.0 〈2017/07/17〉
       - The first public version (as jfmutil).
       - ZRTeXtor is of v1.4.0.
