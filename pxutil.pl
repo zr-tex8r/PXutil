@@ -6,8 +6,8 @@ BEGIN { $_ = $0; s|^(.*)/.*$|$1|; unshift(@INC, $_); }
 use ZRTeXtor ':all';
 use Encode qw(encode decode);
 my $prog_name = 'pxutil';
-my $version = '1.0.1';
-my $mod_date = '2017/07/21';
+my $version = '1.1.0';
+my $mod_date = '2017/09/16';
 #use Data::Dump 'dump';
 #
 my ($sw_hex, $sw_uptool, $sw_noencout, $inenc, $exenc);
@@ -96,9 +96,13 @@ sub main_zpl2tfm {
 }
 
 sub show_usage {
-  my ($v, $m) = @_;
+  print(usage_message());
+  exit;
+}
+sub usage_message {
+  my ($v, $m);
   ($v, $m) = textool_version() or error();
-  print <<"END"; exit;
+  return <<"END";
 This is $prog_name v$version <$mod_date> by 'ZR'.
 [ZRTeXtor library v$v <$m> by 'ZR']
 Usage: $prog_name vf2zvp0 [<options>] <in.vf> [<out.zvp0>]
@@ -107,7 +111,11 @@ Usage: $prog_name vf2zvp0 [<options>] <in.vf> [<out.zvp0>]
        $prog_name zvp2vf [<options>] <in.zvp> [<out.vf> <out.tfm>]
        $prog_name zpl2tfm [<options>] <in.zvp0> [<out.vf>]
        $prog_name tfm2zpl [<options>] <in.zvp0> [<out.vf>]
-  VF and TFM files are searched by kpsewhich.
+Arguments:
+  <in.xxx>        input files
+    N.B. Input TFM/VF files are searched by Kpathsea. (ZVP/ZVP9 are not.)
+  <out.xxx>       output files
+Options:
        --hex      output charcode in 'H' form [default]
   -o / --octal    output charcode in 'O' form
   --uptool        use upTeX tools (uppltotf etc.)

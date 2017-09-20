@@ -13,6 +13,8 @@ Perl： pTeX の TFM/VF を操作するユーティリティ
     ことが期待できる。
   - ZVP 中の VF に直接対応する部分を抜き出した「ZVP0 形式」と VF (和文/
     欧文)との間の相互変換。
+  - 仮想フォントの別名での複製。この場合、VF 中に記録された参照 TFM 名も
+    適切に変更される。
 
 ### 前提環境
 
@@ -21,12 +23,29 @@ Perl： pTeX の TFM/VF を操作するユーティリティ
       - kpsewhich
       - pltotf, tftopl
 
+### 参考サイト
+
+  - PXutil パッケージ  
+    En toi Pythmeni tes TeXnopoleos ～電脳世界の奥底にて～  
+    <http://zrbabbler.sp.land.to/pxutil.html>  
+    pxutil を用いた和文仮想フォントの改変の方法について解説されている。
+    jfmutil は pxutil の上位互換なので、この記事の内容は単にコマンド名を
+    `pxutil` から `jfmutil` に変えることでそのまま通用する。
+
+  - PXcopyfont パッケージ  
+    En toi Pythmeni tes TeXnopoleos ～電脳世界の奥底にて～  
+    <http://zrbabbler.sp.land.to/pxcopyfont.html>  
+    pxcopyfont を用いた仮想フォントの複製の方法について解説されている。
+    pxcopyfont と jfmutil の関係については後述。
+
 ### pxutil との関係
 
-jfmutil の機能は pxutil と等価である。pxutil の動作のためには ZRTeXtor
-モジュールを別途インストールする必要があった。CTAN に登録するにあたって
-単体で動作するプログラムの方がよいと考え、pxutil に ZRTeXtor のコードの
-一部を併合したものがこの jfmutil である。
+jfmutil の ZVP 関連の機能は [pxutil] と等価である。pxutil の動作のためには
+ZRTeXtor モジュールを別途インストールする必要があった。CTAN に登録するに
+あたって単体で動作するプログラムの方がよいと考え、pxutil に ZRTeXtor の
+コードの一部を併合したものが当初の jfmutil である。
+
+[pxutil]: https://github.com/zr-tex8r/PXutil
 
 jfmutil と pxutil の相違点は次のとおりである：
 
@@ -37,12 +56,61 @@ jfmutil と pxutil の相違点は次のとおりである：
   - なお、ZRTeXtor の 1.4.0 版より、設定項目 `tftopl`/`pltotf` の既定値は
     `ptftopl`/`ppltotf` となっている。
 
+### pxcopyfont との関係
+
+jfmutil の仮想フォント複製の機能は [pxcopyfont] から移植したものである。
+
+  - `jfmutil vfinfo in[.vf]`（VF ファイルの情報出力）は  
+    `pxcopyfont in` と情報を出力する。ただし出力形式は両者で異なる。
+  - `jfmutil vfcopy in[.vf] out[.vf] base[.tfm]...`（VF 複製）は  
+    `pxcopyfont in out base...` と等価である。
+
 ### ライセンス
 
 MIT ライセンス
 
-機能解説
---------
+
+機能解説：VF 複製
+-----------------
+
+仮想フォント（VF と TFM の組）のファイルを別の名前でコピーする。一般に、
+VF ファイルの中には参照する TFM の名前が記録されているが、コピーの際には
+この TFM 名はコピー先ものに変更される。（従って、VF ファイルについては、
+コピー元とコピー先はバイナリ同一にはならない。）
+
+### 使用法
+
+    jfmutil vfcopy [<オプション>] <入力.vf> <出力.vf> <出力.tfm>...
+    jfmutil vfinfo [<オプション>] <入力.vf>
+
+※既定の拡張子は省略可能。
+
+`vfinfo` サブコマンドは `入力.vf` の参照 TFM の情報を出力する。例えば、
+upTeX 標準の `upjpnrm-h.vf` の場合、以下の出力になる：
+
+    0=uprml-h
+    2=upjisr-hq
+
+`vfcopy` サブコマンドは `入力.vf` とそれが参照する TFM 群の組を、
+`出力.vf` とその後の引数で指定した TFM 群にコピーする。例えば
+
+    jfmutil vfcopy upjpnrm-h myjpnrm-h myrml-h myjisr-hq
+
+は以下の動作を行う：
+
+  - `upjpnrm-h.vf` を `myjpnrm-h.vf` に改変付でコピーする。
+  - `uprml-h.tfm` を `myrml-h.tfm` にコピーする。
+  - `upjisr-hq.tfm` を `myjisr-hq.tfm` にコピーする。
+
+引数中の出力 TFM ファイル名の列は途中に `...` を書いて以降を省略できる。
+この場合、対応する入力 TFM ファイル（入力 VF に記録されたもの）と同じ名前
+が使われる。
+
+※TFM について入力と出力の名前が同じ場合は、ファイルのコピーは行わない。
+
+
+機能解説：ZVP 変換
+------------------
 
 ### TeX のフォントファイルの形式
 
@@ -391,6 +459,9 @@ MIT ライセンス
 
 更新履歴
 --------
+
+  * Version 1.1.0 〈2017/09/16〉
+      - pxcopyfont 由来の機能（`vfinfo`、`vfcopy` サブコマンド）を追加。
 
   * Version 1.0.1 〈2017/07/21〉
       - shebang 行を追加。

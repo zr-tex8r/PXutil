@@ -13,6 +13,8 @@ available include:
     as counterpart to vftovp/vptovf programs.
   - The mutual conversion between VF files alone and files in the “ZVP0
     format”, which is a subset of the ZVP format.
+  - The replication of virtual fonts with different names, where the
+    referred TFM names in the VF will be suitably revised.
 
 ### SYSTEM REQUIREMENTS
 
@@ -29,13 +31,19 @@ This package is distributed under the MIT License.
 
     This is jfmutil v1.x.x <2017/xx/xx> by 'ZR'.
     [ZRTeXtor library v1.x.x <2017/xx/xx> by 'ZR']
+
+    * ZVP Conversion
     Usage: jfmutil vf2zvp0 [<options>] <in.vf> [<out.zvp0>]
            jfmutil zvp02vf [<options>] <in.zvp0> [<out.vf>]
            jfmutil vf2zvp [<options>] <in.vf> [<in.tfm> <out.zvp>]
            jfmutil zvp2vf [<options>] <in.zvp> [<out.vf> <out.tfm>]
            jfmutil zpl2tfm [<options>] <in.zvp0> [<out.vf>]
            jfmutil tfm2zpl [<options>] <in.zvp0> [<out.vf>]
-      VF and TFM files are searched by kpsewhich.
+    Arguments:
+      <in.xxx>        input files
+        N.B. Input TFM/VF files are searched by Kpathsea. (ZVP/ZVP9 are not.)
+      <out.xxx>       output files
+    Options:
            --hex      output charcode in 'H' form [default]
       -o / --octal    output charcode in 'O' form
       --uptool        use upTeX tools (uppltotf etc.)
@@ -45,11 +53,28 @@ This package is distributed under the MIT License.
       -j / --jis      == --kanji=jis --kanji-internal=jis
       -u / --unicode  == --kanji=utf8 --kanji-internal=unicode
       -E / --no-encoding == --kanji=none --kanji-internal=none
+    * VF Replication
+    Usage: jfmutil vfcopy [<options>] <in.vf> <out.zvf> <out_base.tfm>...
+           jfmutil vfinfo [<options>] <in.vf>
+    Arguments:
+      <in.vf>       input virtual font name
+        N.B. Input TFM/VF files are searched by Kpathsea.
+      <out.vf>      output virtual font name
+      <out_base.tfm>  names of raw TFMs referred by the output virtual font;
+                    each entry replaces a font mapping in the input font in
+                    the given order, so the exactly same number of entries
+                    must be given as font mappings
+    Options:
+      -z / --zero     change first fontmap id in vf to zero
+
 
 Please refer to README-ja.md (in Japanese) for detail.
 
 Revision History
 ----------------
+
+  * Version 1.1.0 〈2017/09/16〉
+      - Add subcommands `vfinfo` and `vfcopy`.
 
   * Version 1.0.1 〈2017/07/21〉
       - Add shebang line.
