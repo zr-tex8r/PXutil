@@ -460,6 +460,9 @@ upTeX 標準の `upjpnrm-h.vf` の場合、以下の出力になる：
 更新履歴
 --------
 
+  * Version 1.1.1 〈2018/01/20〉
+      - バグ修正。
+
   * Version 1.1.0 〈2017/09/16〉
       - pxcopyfont 由来の機能（`vfinfo`、`vfcopy` サブコマンド）を追加。
 

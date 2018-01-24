@@ -73,6 +73,9 @@ Please refer to README-ja.md (in Japanese) for detail.
 Revision History
 ----------------
 
+  * Version 1.1.1 〈2018/01/20〉
+      - Bug fix.
+
   * Version 1.1.0 〈2017/09/16〉
       - Add subcommands `vfinfo` and `vfcopy`.
 
