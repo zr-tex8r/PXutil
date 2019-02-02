@@ -49,6 +49,7 @@ my ($pxutil, $ZRTeXtor, $ZRTeXtor_version);
     if (m/^use ZRTeXtor/) { $in = 1; }
   }
   $pxutil = join("\n", @ln);
+  $pxutil =~ s/pxutil/jfmutil/g;
 }
 {
   local ($/, $_);
@@ -56,7 +57,6 @@ my ($pxutil, $ZRTeXtor, $ZRTeXtor_version);
   s/##ZRTeXtor##/$ZRTeXtor/;
   s/##ZRTeXtor_version##/$ZRTeXtor_version/;
   s/##pxutil##/$pxutil/;
-  s/pxutil/jfmutil/g;
   open(my $ho, '>', $output_file) or die "Cannot open '$output_file'";
   binmode($ho); print $ho ($_);
   close($ho);
@@ -67,7 +67,7 @@ __DATA__
 #
 # This is file 'jfmutil.pl'.
 #
-# Copyright (c) 2017 Takayuki YATO (aka. "ZR")
+# Copyright (c) 2018 Takayuki YATO (aka. "ZR")
 #   GitHub:   https://github.com/zr-tex8r
 #   Twitter:  @zr_tex8r
 #

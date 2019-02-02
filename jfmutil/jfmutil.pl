@@ -12,8 +12,8 @@ use strict;
 
 #------------------------------------------------- ZRTeXtor module
 package ZRTeXtor;
-our $VERSION = 1.004_01;
-our $mod_date = "2018/01/20";
+our $VERSION = 1.005_00;
+our $mod_date = "2018/01/21";
 use Encode qw(encode decode);
 
 # Here follows excerpt from ZRTeXtor.pm
@@ -2767,8 +2767,8 @@ package main;
   }
 }
 
-#------------------------------------------------- jfmutil stuffs
-# Here follows excerpt from jfmutil.pl
+#------------------------------------------------- pxutil stuffs
+# Here follows excerpt from pxutil.pl
 #================================================= BEGIN
 use Encode qw(encode decode);
 my $prog_name = 'jfmutil';
