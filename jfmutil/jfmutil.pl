@@ -2772,8 +2772,8 @@ package main;
 #================================================= BEGIN
 use Encode qw(encode decode);
 my $prog_name = 'jfmutil';
-my $version = '1.1.1';
-my $mod_date = '2018/01/20';
+my $version = '1.1.2';
+my $mod_date = '2018/01/21';
 #use Data::Dump 'dump';
 #
 my ($sw_hex, $sw_uptool, $sw_noencout, $inenc, $exenc);
