@@ -6,11 +6,11 @@ BEGIN { $_ = $0; s|^(.*)/.*$|$1|; unshift(@INC, $_); }
 use ZRTeXtor ':all';
 use Encode qw(encode decode);
 my $prog_name = 'pxutil';
-my $version = '1.1.1';
-my $mod_date = '2018/01/20';
+my $version = '1.2.0';
+my $mod_date = '2019/02/02';
 #use Data::Dump 'dump';
 #
-my ($sw_hex, $sw_uptool, $sw_noencout, $inenc, $exenc);
+my ($sw_hex, $sw_uptool, $sw_noencout, $inenc, $exenc, $sw_lenient);
 my ($proc_name, $infile, $in2file ,$outfile, $out2file);
 
 #### main procedure
@@ -119,6 +119,7 @@ Options:
        --hex      output charcode in 'H' form [default]
   -o / --octal    output charcode in 'O' form
   --uptool        use upTeX tools (uppltotf etc.)
+  --lenient       ignore non-fatal error on VFs
   The following options affect interpretation of 'K' form.
   --kanji=ENC     set source encoding: ENC=jis/sjis/euc/utf8/none
   --kanji-internal=ENC set internal encoding: ENC=jis/unicode/none
@@ -143,6 +144,8 @@ sub read_option {
       $sw_hex = 0;
     } elsif ($opt eq '--uptool') {
       $sw_uptool = 1;
+    } elsif ($opt eq '--lenient') {
+      $sw_lenient = 1;
     } elsif ($opt eq '--no-encoding' || $opt eq '-E') {
       ($exenc, $inenc) = ('none', 'none');
     } elsif ($opt eq '--jis' || $opt eq '-j') {
@@ -163,6 +166,7 @@ sub read_option {
     or error("unknown internal kanji code: $inenc");
   #if ($inenc eq 'unicode') { $sw_uptool = 1; }
   if ($sw_hex) { pl_prefer_hex(1); }
+  if ($sw_lenient) { vf_strict(0); }
   (0 <= $#ARGV && $#ARGV <= 1)
     or error("wrong number of arguments");
   if ($proc_name eq 'vf2zvp0') {

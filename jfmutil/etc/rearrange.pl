@@ -98,7 +98,7 @@ package main;
     pl_parse pl_form pl_prefer_hex
     jcode_set
     kpse
-    vf_parse vf_form vf_parse_ex vf_form_ex
+    vf_parse vf_form vf_parse_ex vf_form_ex vf_strict
     jfm_use_uptex_tool jfm_parse jfm_form
   )) {
     *{$_} = *{"ZRTeXtor::".$_};

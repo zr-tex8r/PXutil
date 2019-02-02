@@ -73,6 +73,12 @@ Please refer to README-ja.md (in Japanese) for detail.
 Revision History
 ----------------
 
+  * Version 1.2.0 〈2019/02/02〉
+      - Add option `--lenient`.
+
+  * Version 1.1.2 〈2018/01/21〉
+      - Use ZRTeXtor v1.5.0.
+
   * Version 1.1.1 〈2018/01/20〉
       - Bug fix.
 
