@@ -67,7 +67,7 @@ __DATA__
 #
 # This is file 'jfmutil.pl'.
 #
-# Copyright (c) 2018 Takayuki YATO (aka. "ZR")
+# Copyright (c) 2019 Takayuki YATO (aka. "ZR")
 #   GitHub:   https://github.com/zr-tex8r
 #   Twitter:  @zr_tex8r
 #
@@ -116,12 +116,11 @@ package main;
 *usage_message_org = \&usage_message;
 
 *usage_message = sub {
-  local $_ = usage_message_org();
+  local ($_) = usage_message_org();
   my ($part1, $part2) = (<<"EOT1", <<"EOT2");
 
 * ZVP Conversion
 EOT1
-
 
 * VF Replication
 Usage: $prog_name vfcopy [<options>] <in.vf> <out.vf> <out_base.tfm>...
@@ -142,8 +141,12 @@ Options:
   --unicode     generate VF for 'direct-unicode' mode imposed by pxufont
                 package; this option is supported only for upTeX fonts and
                 thus implies '--uptex' (only for jodel)
+
+* Common Options
+  -h / --help     show this help message and exit
+  -V / --version  show version
 EOT2
-  s/(Usage:)/$part1$1/; s/$/$part2/;
+  s/(Usage:)/$part1$1/; s/\z/$part2/;
   return $_;
 };
 
@@ -257,7 +260,9 @@ sub read_option {
   while ($ARGV[0] =~ m/^-/) {
     my $opt = shift(@ARGV);
     if ($opt =~ m/--?h(elp)?/) {
-      show_usage();
+      main::show_usage();
+    } elsif ($opt =~ m/-(?:V|-version)?/) {
+      main::show_version();
     } elsif ($opt eq '-z' || $opt eq '--zero') {
       $op_zero = 1;
     } elsif ($opt eq '--uptex') {

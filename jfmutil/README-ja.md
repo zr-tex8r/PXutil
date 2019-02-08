@@ -21,7 +21,7 @@ Perl： pTeX の TFM/VF を操作するユーティリティ
   - Perl 処理系: v5.8.1 以降
   - pTeX の配布に含まれる以下のコマンド
       - kpsewhich
-      - pltotf, tftopl
+      - ppltotf, ptftopl
 
 ### 参考サイト
 
@@ -242,6 +242,12 @@ upTeX 標準の `upjpnrm-h.vf` の場合、以下の出力になる：
       - JIS X 0208 と Unicode の間の文字の対応は JIS X 0221 の規定に従う。
         ただ、TeX 関係のソフトウェアで別の方式を用いるものもあるので、
         両者の間のコード変換は避けた方が無難である。
+
+    ・その他
+      --uptool
+        ppltotf/ptftopl に代わりに uppltotf/uptftopl を用いる。
+      --lenient
+        VF 解析時に生じた軽微な問題をエラーと扱わない。
 </pre>
 
 ### ZPL 形式の仕様
@@ -460,11 +466,16 @@ upTeX 標準の `upjpnrm-h.vf` の場合、以下の出力になる：
 更新履歴
 --------
 
+  * Version 1.2.1 〈2019/02/08〉
+      - (試験的) `jodel` コマンドを追加。
+
   * Version 1.2.0 〈2019/02/02〉
       - `--lenient` オプションを追加。
 
   * Version 1.1.2 〈2018/01/21〉
-      - ZRTeXtor の v1.5.0 を用いる。
+      - ZRTeXtor 1.5.0 版に同期。変更点は：
+          + JFM 形式について最近行われた「非 BMP 文字を非既定文字クラスに
+            含めることを可能にする」拡張をサポートした。
 
   * Version 1.1.1 〈2018/01/20〉
       - バグ修正。

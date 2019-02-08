@@ -400,14 +400,17 @@ MIT ライセンス
 更新履歴
 --------
 
+  * Version 1.2.1 〈2019/02/08〉
+      - jfmutil: (試験的) `jodel` コマンドを追加。
+
   * Version 1.2.0 〈2019/02/02〉
       - `--lenient` オプションを追加。
 
   * Version 1.1.2 〈2018/01/21〉
-      - jfmutil を ZRTeXtor 1.5.0 版に同期。
+      - jfmutil: ZRTeXtor 1.5.0 版に同期。
 
   * Version 1.1.1 〈2018/01/20〉
-      - jfmutil を ZRTeXtor 1.4.1 版に同期。
+      - jfmutil: ZRTeXtor 1.4.1 版に同期。
 
   * Version 1.1.0 〈2017/09/16〉
 

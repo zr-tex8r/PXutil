@@ -2,7 +2,7 @@
 #
 # This is file 'jfmutil.pl'.
 #
-# Copyright (c) 2018 Takayuki YATO (aka. "ZR")
+# Copyright (c) 2019 Takayuki YATO (aka. "ZR")
 #   GitHub:   https://github.com/zr-tex8r
 #   Twitter:  @zr_tex8r
 #
@@ -2772,8 +2772,8 @@ package main;
 #================================================= BEGIN
 use Encode qw(encode decode);
 my $prog_name = 'jfmutil';
-my $version = '1.2.0';
-my $mod_date = '2019/02/02';
+my $version = '1.2.1';
+my $mod_date = '2019/02/08';
 #use Data::Dump 'dump';
 #
 my ($sw_hex, $sw_uptool, $sw_noencout, $inenc, $exenc, $sw_lenient);
@@ -2791,14 +2791,21 @@ my %procs = (
 );
 
 sub main {
-  my ($proc);
   if (defined textool_error()) { error(); }
-  if ((($proc_name) = $ARGV[0] =~ m/^:?(\w+)$/)
-      && defined($proc = $procs{$proc_name})) {
-    shift(@ARGV); $proc->();
-  } else {
+  local $_ = shift(@ARGV);
+  if (!defined $_) {
     show_usage();
-  }
+  } elsif (($proc_name) = m/^:?(\w+)$/) {
+    my $proc = $procs{$proc_name};
+    (defined $proc) or error("unknown subcommand name", $proc_name);
+    $proc->();
+  } elsif (m/^-/) {
+    if (m/^--?h(?:elp)?$/) {
+      show_usage();
+    } elsif (m/^-(?:V|-version)$/) {
+      show_version();
+    } else { error("unknown (or invalid usage of) option", $_); }
+  } else { error("invalid argument", $_); }
 }
 
 sub main_vf2zvp0 {
@@ -2865,10 +2872,14 @@ sub show_usage {
   print(usage_message());
   exit;
 }
+sub show_version {
+  print("$prog_name version $version\n");
+  exit;
+}
 sub usage_message {
   my ($v, $m);
   ($v, $m) = textool_version() or error();
-  return <<"END";
+  return <<"EOT1", <<"EOT2";
 This is $prog_name v$version <$mod_date> by 'ZR'.
 [ZRTeXtor library v$v <$m> by 'ZR']
 Usage: $prog_name vf2zvp0 [<options>] <in.vf> [<out.zvp0>]
@@ -2892,7 +2903,10 @@ Options:
   -j / --jis      == --kanji=jis --kanji-internal=jis
   -u / --unicode  == --kanji=utf8 --kanji-internal=unicode
   -E / --no-encoding == --kanji=none --kanji-internal=none
-END
+EOT1
+  -h / --help     show this help message and exit
+  -V / --version  show version
+EOT2
 }
 
 #### command-line options
@@ -2904,6 +2918,8 @@ sub read_option {
     $opt = shift(@ARGV);
     if ($opt =~ m/--?h(elp)?/) {
       show_usage();
+    } elsif ($opt =~ m/-(?:V|-version)?/) {
+      show_version();
     } elsif ($opt eq '--hex') {
       $sw_hex = 1;
     } elsif ($opt eq '--octal' || $opt eq '-o') {
@@ -3000,12 +3016,11 @@ sub error {
 *usage_message_org = \&usage_message;
 
 *usage_message = sub {
-  local $_ = usage_message_org();
+  local ($_) = usage_message_org();
   my ($part1, $part2) = (<<"EOT1", <<"EOT2");
 
 * ZVP Conversion
 EOT1
-
 
 * VF Replication
 Usage: $prog_name vfcopy [<options>] <in.vf> <out.vf> <out_base.tfm>...
@@ -3026,8 +3041,12 @@ Options:
   --unicode     generate VF for 'direct-unicode' mode imposed by pxufont
                 package; this option is supported only for upTeX fonts and
                 thus implies '--uptex' (only for jodel)
+
+* Common Options
+  -h / --help     show this help message and exit
+  -V / --version  show version
 EOT2
-  s/(Usage:)/$part1$1/; s/$/$part2/;
+  s/(Usage:)/$part1$1/; s/\z/$part2/;
   return $_;
 };
 
@@ -3141,7 +3160,9 @@ sub read_option {
   while ($ARGV[0] =~ m/^-/) {
     my $opt = shift(@ARGV);
     if ($opt =~ m/--?h(elp)?/) {
-      show_usage();
+      main::show_usage();
+    } elsif ($opt =~ m/-(?:V|-version)?/) {
+      main::show_version();
     } elsif ($opt eq '-z' || $opt eq '--zero') {
       $op_zero = 1;
     } elsif ($opt eq '--uptex') {

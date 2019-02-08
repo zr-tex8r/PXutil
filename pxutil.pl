@@ -6,8 +6,8 @@ BEGIN { $_ = $0; s|^(.*)/.*$|$1|; unshift(@INC, $_); }
 use ZRTeXtor ':all';
 use Encode qw(encode decode);
 my $prog_name = 'pxutil';
-my $version = '1.2.0';
-my $mod_date = '2019/02/02';
+my $version = '1.2.1';
+my $mod_date = '2019/02/08';
 #use Data::Dump 'dump';
 #
 my ($sw_hex, $sw_uptool, $sw_noencout, $inenc, $exenc, $sw_lenient);
@@ -25,14 +25,21 @@ my %procs = (
 );
 
 sub main {
-  my ($proc);
   if (defined textool_error()) { error(); }
-  if ((($proc_name) = $ARGV[0] =~ m/^:?(\w+)$/)
-      && defined($proc = $procs{$proc_name})) {
-    shift(@ARGV); $proc->();
-  } else {
+  local $_ = shift(@ARGV);
+  if (!defined $_) {
     show_usage();
-  }
+  } elsif (($proc_name) = m/^:?(\w+)$/) {
+    my $proc = $procs{$proc_name};
+    (defined $proc) or error("unknown subcommand name", $proc_name);
+    $proc->();
+  } elsif (m/^-/) {
+    if (m/^--?h(?:elp)?$/) {
+      show_usage();
+    } elsif (m/^-(?:V|-version)$/) {
+      show_version();
+    } else { error("unknown (or invalid usage of) option", $_); }
+  } else { error("invalid argument", $_); }
 }
 
 sub main_vf2zvp0 {
@@ -99,10 +106,14 @@ sub show_usage {
   print(usage_message());
   exit;
 }
+sub show_version {
+  print("$prog_name version $version\n");
+  exit;
+}
 sub usage_message {
   my ($v, $m);
   ($v, $m) = textool_version() or error();
-  return <<"END";
+  return <<"EOT1", <<"EOT2";
 This is $prog_name v$version <$mod_date> by 'ZR'.
 [ZRTeXtor library v$v <$m> by 'ZR']
 Usage: $prog_name vf2zvp0 [<options>] <in.vf> [<out.zvp0>]
@@ -126,7 +137,10 @@ Options:
   -j / --jis      == --kanji=jis --kanji-internal=jis
   -u / --unicode  == --kanji=utf8 --kanji-internal=unicode
   -E / --no-encoding == --kanji=none --kanji-internal=none
-END
+EOT1
+  -h / --help     show this help message and exit
+  -V / --version  show version
+EOT2
 }
 
 #### command-line options
@@ -138,6 +152,8 @@ sub read_option {
     $opt = shift(@ARGV);
     if ($opt =~ m/--?h(elp)?/) {
       show_usage();
+    } elsif ($opt =~ m/-(?:V|-version)?/) {
+      show_version();
     } elsif ($opt eq '--hex') {
       $sw_hex = 1;
     } elsif ($opt eq '--octal' || $opt eq '-o') {

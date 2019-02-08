@@ -21,7 +21,7 @@ available include:
   - Perl interpreter: v5.8.1 or later.
   - The following commands from pTeX distribution:
       - kpsewhich
-      - pltotf, tftopl
+      - ppltotf, ptftopl
 
 ### LICENSE
 
@@ -29,8 +29,8 @@ This package is distributed under the MIT License.
 
 ### USAGE
 
-    This is jfmutil v1.x.x <2017/xx/xx> by 'ZR'.
-    [ZRTeXtor library v1.x.x <2017/xx/xx> by 'ZR']
+    This is jfmutil v1.x.x <20xx/xx/xx> by 'ZR'.
+    [ZRTeXtor library v1.x.x <20xx/xx/xx> by 'ZR']
 
     * ZVP Conversion
     Usage: jfmutil vf2zvp0 [<options>] <in.vf> [<out.zvp0>]
@@ -47,15 +47,18 @@ This package is distributed under the MIT License.
            --hex      output charcode in 'H' form [default]
       -o / --octal    output charcode in 'O' form
       --uptool        use upTeX tools (uppltotf etc.)
+      --lenient       ignore non-fatal error on VFs
       The following options affect interpretation of 'K' form.
       --kanji=ENC     set source encoding: ENC=jis/sjis/euc/utf8/none
       --kanji-internal=ENC set internal encoding: ENC=jis/unicode/none
       -j / --jis      == --kanji=jis --kanji-internal=jis
       -u / --unicode  == --kanji=utf8 --kanji-internal=unicode
       -E / --no-encoding == --kanji=none --kanji-internal=none
+
     * VF Replication
-    Usage: jfmutil vfcopy [<options>] <in.vf> <out.zvf> <out_base.tfm>...
+    Usage: jfmutil vfcopy [<options>] <in.vf> <out.vf> <out_base.tfm>...
            jfmutil vfinfo [<options>] <in.vf>
+           jfmutil jodel [<options>] <in.vf> <prefix>
     Arguments:
       <in.vf>       input virtual font name
         N.B. Input TFM/VF files are searched by Kpathsea.
@@ -64,20 +67,34 @@ This package is distributed under the MIT License.
                     each entry replaces a font mapping in the input font in
                     the given order, so the exactly same number of entries
                     must be given as font mappings
+      <prefix>      prefix of output font names (only for jodel)
     Options:
-      -z / --zero     change first fontmap id in vf to zero
+      -z / --zero   change first fontmap id in vf to zero
+      --uptex       assume input font to be for upTeX (only for jodel)
+      --unicode     generate VF for 'direct-unicode' mode imposed by pxufont
+                    package; this option is supported only for upTeX fonts and
+                    thus implies '--uptex' (only for jodel)
 
+    * Common Options
+      -h / --help     show this help message and exit
+      -V / --version  show version
 
+C>jfmutil --version
 Please refer to README-ja.md (in Japanese) for detail.
 
 Revision History
 ----------------
 
+  * Version 1.2.1 〈2019/02/08〉
+      - (experimental) Add `jodel` subcommand.
+
   * Version 1.2.0 〈2019/02/02〉
       - Add option `--lenient`.
 
   * Version 1.1.2 〈2018/01/21〉
-      - Use ZRTeXtor v1.5.0.
+      - Use ZRTeXtor v1.5.0. The changes are:
+          + Support for the recent extension of JFM format, which allows
+            non-default character classes to contain non-BMP characters.
 
   * Version 1.1.1 〈2018/01/20〉
       - Bug fix.
