@@ -6,8 +6,8 @@ BEGIN { $_ = $0; s|^(.*)/.*$|$1|; unshift(@INC, $_); }
 use ZRTeXtor ':all';
 use Encode qw(encode decode);
 my $prog_name = 'pxutil';
-my $version = '1.2.1';
-my $mod_date = '2019/02/08';
+my $version = '1.2.2';
+my $mod_date = '2019/02/09';
 #use Data::Dump 'dump';
 #
 my ($sw_hex, $sw_uptool, $sw_noencout, $inenc, $exenc, $sw_lenient);
@@ -150,9 +150,9 @@ sub read_option {
   $sw_hex = 1; $sw_uptool = 0;
   while ($ARGV[0] =~ m/^-/) {
     $opt = shift(@ARGV);
-    if ($opt =~ m/--?h(elp)?/) {
+    if ($opt =~ m/^--?h(elp)?$/) {
       show_usage();
-    } elsif ($opt =~ m/-(?:V|-version)?/) {
+    } elsif ($opt =~ m/^-(?:V|-version)?$/) {
       show_version();
     } elsif ($opt eq '--hex') {
       $sw_hex = 1;

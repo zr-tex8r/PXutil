@@ -259,9 +259,9 @@ sub read_option {
   $op_zero = 0; $op_uptex = 0; $op_quiet = 0;
   while ($ARGV[0] =~ m/^-/) {
     my $opt = shift(@ARGV);
-    if ($opt =~ m/--?h(elp)?/) {
+    if ($opt =~ m/^--?h(elp)?$/) {
       main::show_usage();
-    } elsif ($opt =~ m/-(?:V|-version)?/) {
+    } elsif ($opt =~ m/^-(?:V|-version)?$/) {
       main::show_version();
     } elsif ($opt eq '-z' || $opt eq '--zero') {
       $op_zero = 1;
