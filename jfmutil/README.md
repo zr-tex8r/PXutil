@@ -85,6 +85,9 @@ Please refer to README-ja.md (in Japanese) for detail.
 Revision History
 ----------------
 
+  * Version 1.2.3 〈2019/09/02〉
+      - Bug fix.
+
   * Version 1.2.2 〈2019/02/09〉
       - Bug fix.
 
