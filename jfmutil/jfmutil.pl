@@ -2,7 +2,7 @@
 #
 # This is file 'jfmutil.pl'.
 #
-# Copyright (c) 2019 Takayuki YATO (aka. "ZR")
+# Copyright (c) 2008-2020 Takayuki YATO (aka. "ZR")
 #   GitHub:   https://github.com/zr-tex8r
 #   Twitter:  @zr_tex8r
 #
@@ -2766,7 +2766,7 @@ package main;
   foreach (qw(
     textool_error textool_version
     read_whole_file write_whole_file
-    pl_parse pl_form pl_prefer_hex
+    pl_parse pl_form pl_prefer_hex pl_value
     jcode_set
     kpse
     vf_parse vf_form vf_parse_ex vf_form_ex vf_strict
@@ -2781,8 +2781,8 @@ package main;
 #================================================= BEGIN
 use Encode qw(encode decode);
 my $prog_name = 'jfmutil';
-my $version = '1.2.3';
-my $mod_date = '2019/09/02';
+my $version = '1.2.4';
+my $mod_date = '2020/05/02';
 #use Data::Dump 'dump';
 #
 my ($sw_hex, $sw_uptool, $sw_noencout, $inenc, $exenc, $sw_lenient);
@@ -3051,6 +3051,9 @@ Options:
                 package; this option is supported only for upTeX fonts and
                 thus implies '--uptex' (only for jodel)
 
+* VF Compaction
+Usage: $prog_name compact <in.vf> <out.vf>
+
 * Common Options
   -h / --help     show this help message and exit
   -V / --version  show version
@@ -3063,6 +3066,7 @@ EOT2
   vfinfo  => \&main_vfinfo,
   vfcopy  => \&main_vfcopy,
   jodel   => \&main_jodel,
+  compact => \&main_compact,
 );
 
 sub main_vfinfo {
@@ -3078,6 +3082,11 @@ sub main_vfcopy {
 sub main_jodel {
   PXCopyFont::read_option('jodel');
   PXCopyFont::jodel();
+}
+
+sub main_compact {
+  PXCompact::read_option('compact');
+  PXCompact::compact();
 }
 
 #------------------------------------------------- pxcopyfont stuffs
@@ -3344,6 +3353,71 @@ sub jodel_form_vf {
   }
   my $tfm = join('', $vfc->[1], @lst, $vfc->[2]);
   return $tfm . ("\xf8" x (4 - length($tfm) % 4));
+}
+
+#------------------------------------------------- 'compact' stuffs
+package PXCompact;
+
+*error = *main::error;
+
+our ($src_name, $dst_name, $op_quiet);
+
+sub info {
+  ($op_quiet) or ::show_info(@_);
+}
+
+sub num_chars {
+  my ($pl) = @_; my $c = 0;
+  foreach (@$pl) { $c += 1 if ($_->[0] eq 'CHARACTER'); }
+  return $c;
+}
+
+sub is_simple_char {
+  local ($_) = @_;
+  ($#$_ == 4 &&
+    $_->[0] eq 'CHARACTER' &&
+    $_->[3][0] eq 'CHARWD' &&
+    $_->[4][0] eq 'MAP'
+  ) or return;
+  my $cc = ::pl_value($_, 1);
+  $_ = $_->[4];
+  ($#$_ == 1 &&
+    $_->[1][0] eq 'SETCHAR' &&
+    ::pl_value($_->[1], 1) == $cc
+  ) or return;
+  return 1;
+}
+
+sub compact {
+  local $_ = ::read_whole_file(::kpse("$src_name.vf"), 1) or error();
+  my $pl = ::vf_parse($_) or error();
+  my ($siz, $nc) = (length($_), num_chars($pl));
+  info("from", "$siz bytes, $nc chars", "$src_name.vf");
+  $pl = [ grep { !is_simple_char($_) } (@$pl) ];
+  $_ = ::vf_form($pl) or error();
+  ($siz, $nc) = (length($_), num_chars($pl));
+  ::write_whole_file("$dst_name.vf", $_, 1) or error();
+  info("  to", "$siz bytes, $nc chars", "$dst_name.vf");
+}
+
+sub read_option {
+  my ($proc) = @_;
+  $op_quiet = 0;
+  while ($ARGV[0] =~ m/^-/) {
+    my $opt = shift(@ARGV);
+    if ($opt =~ m/^--?h(elp)?$/) {
+      main::show_usage();
+    } elsif ($opt =~ m/^-(?:V|-version)?$/) {
+      main::show_version();
+    } elsif ($opt eq '--quiet') { # undocumented
+      $op_quiet = 2;
+    } else {
+      error("invalid option", $opt);
+    }
+  }
+  ($#ARGV == 1) or error("wrong number of arguments");
+  ($src_name, $dst_name) = @ARGV;
+  $src_name =~ s/\.vf$//; $dst_name =~ s/\.vf$//;
 }
 
 #------------------------------------------------- go to main

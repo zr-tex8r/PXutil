@@ -85,6 +85,9 @@ Please refer to README-ja.md (in Japanese) for detail.
 Revision History
 ----------------
 
+  * Version 1.2.4 〈2020/05/02〉
+      - (experimental) Add `compact` subcommand.
+
   * Version 1.2.3 〈2019/09/02〉
       - Bug fix.
 
