@@ -2984,8 +2984,6 @@ sub read_option {
   #if ($inenc eq 'unicode') { $sw_uptool = 1; }
   if ($sw_hex) { pl_prefer_hex(1); }
   if ($sw_lenient) { vf_strict(0); }
-  (0 <= $#ARGV && $#ARGV <= 1)
-    or error("wrong number of arguments");
   if ($proc_name eq 'vf2zvp0') {
     ($infile, $outfile) = fix_pathname(".vf", ".zvp0");
   } elsif ($proc_name eq 'zvp02vf') {
@@ -3010,6 +3008,8 @@ sub read_option {
 
 sub fix_pathname {
   my (@ext) = @_; my (@path);
+  (0 <= $#ARGV && $#ARGV <= $#ext)
+    or error("wrong number of arguments");
   @{$path[0]} = split_path($ARGV[0]);
   (defined $path[0][2]) or $path[0][2] = $ext[0];
   foreach (1 .. $#ext) {
