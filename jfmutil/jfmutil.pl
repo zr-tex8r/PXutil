@@ -3093,17 +3093,15 @@ sub main_compact {
 package PXCopyFont;
 
 *error = *main::error;
-*read_whole_file = *main::read_whole_file;
-*write_whole_file = *main::write_whole_file;
 
 our ($src_main, $dst_main, @dst_base, $op_zero, $op_uptex, $op_quiet);
 
 sub info {
-  ($op_quiet) or main::show_info(@_);
+  ($op_quiet) or ::show_info(@_);
 }
 
 sub copy_vf {
-  local $_ = read_whole_file(main::kpse("$src_main.vf"), 1) or error();
+  local $_ = ::read_whole_file(::kpse("$src_main.vf"), 1) or error();
   my $vfc = parse_vf($_);
   my ($nb, $nb1) = (scalar(@{$vfc->[0]}), scalar(@dst_base));
   info("number of base TFMs in '$src_main'", $nb);
@@ -3112,14 +3110,14 @@ sub copy_vf {
   } elsif ($nb != $nb1) {
     error("wrong number of base TFMs given", $nb1);
   }
-  write_whole_file("$dst_main.vf", form_vf($vfc), 1) or error();
-  write_whole_file("$dst_main.tfm",
-      read_whole_file(main::kpse("$src_main.tfm"), 1), 1) or error();
+  ::write_whole_file("$dst_main.vf", form_vf($vfc), 1) or error();
+  ::write_whole_file("$dst_main.tfm",
+      ::read_whole_file(::kpse("$src_main.tfm"), 1), 1) or error();
   foreach my $k (0 .. $#dst_base) {
     my $sfn = $vfc->[0][$k][1]; my $dfn = $dst_base[$k];
     ($sfn ne $dfn) or next;
-    write_whole_file("$dfn.tfm",
-      read_whole_file(main::kpse("$sfn.tfm"), 1), 1) or error();
+    ::write_whole_file("$dfn.tfm",
+      ::read_whole_file(::kpse("$sfn.tfm"), 1), 1) or error();
   }
 }
 
@@ -3146,7 +3144,7 @@ sub parse_vf {
 }
 
 sub info_vf {
-  local $_ = read_whole_file(main::kpse("$src_main.vf"), 1) or error();
+  local $_ = ::read_whole_file(::kpse("$src_main.vf"), 1) or error();
   my $vfc = parse_vf($_);
   foreach (@{$vfc->[0]}) {
     printf("%d=%s\n", $_->[2], $_->[1]);
@@ -3178,9 +3176,9 @@ sub read_option {
   while ($ARGV[0] =~ m/^-/) {
     my $opt = shift(@ARGV);
     if ($opt =~ m/^--?h(elp)?$/) {
-      main::show_usage();
+      ::show_usage();
     } elsif ($opt =~ m/^-(?:V|-version)?$/) {
-      main::show_version();
+      ::show_version();
     } elsif ($opt eq '-z' || $opt eq '--zero') {
       $op_zero = 1;
     } elsif ($opt eq '--uptex') {
@@ -3274,7 +3272,7 @@ sub jodel_for_uptex {
   sub jodel_kpse {
     my ($in) = @_;
     if (exists $jkpse{$in}) { return $jkpse{$in}; }
-    my $out = main::kpse($in); $jkpse{$in} = $out;
+    my $out = ::kpse($in); $jkpse{$in} = $out;
     return $out;
   }
 }
@@ -3291,14 +3289,14 @@ sub jodel_clone {
 sub jodel_analyze {
   local ($_);
   info("**** Analyze VF '$src_main'");
-  $_ = read_whole_file(jodel_kpse("$src_main.tfm"), 1) or error();
+  $_ = ::read_whole_file(jodel_kpse("$src_main.tfm"), 1) or error();
   $jtate = (unpack('n', $_) == 9);
   info("direction", ($jtate) ? 'tate' : 'yoko');
   @jvfname = ($src_main); $jengine = 0;
   info("base TFMs", "");
   for (my $i = 0; $i <= $#jvfname; $i++) {
     my $nvf = $jvfname[$i];
-    $_ = read_whole_file(jodel_kpse("$nvf.vf"), 1)
+    $_ = ::read_whole_file(jodel_kpse("$nvf.vf"), 1)
       or error(($i > 0) ? ("non-standard raw TFM", $nvf) : ());
     $_ = parse_vf($_) or error();
     $jvfidx{$nvf} = $i; $jvfparsed{$nvf} = $_;
@@ -3339,9 +3337,9 @@ sub jodel_generate {
     }
     info("from", "$snvf -> @slst");
     info("  to", "$dnvf -> @dlst");
-    write_whole_file("$dnvf.vf", jodel_form_vf($vfc), 1) or error();
-    write_whole_file("$dnvf.tfm",
-        read_whole_file(jodel_kpse("$snvf.tfm"), 1), 1) or error();
+    ::write_whole_file("$dnvf.vf", jodel_form_vf($vfc), 1) or error();
+    ::write_whole_file("$dnvf.tfm",
+        ::read_whole_file(jodel_kpse("$snvf.tfm"), 1), 1) or error();
   }
 }
 
@@ -3406,9 +3404,9 @@ sub read_option {
   while ($ARGV[0] =~ m/^-/) {
     my $opt = shift(@ARGV);
     if ($opt =~ m/^--?h(elp)?$/) {
-      main::show_usage();
+      ::show_usage();
     } elsif ($opt =~ m/^-(?:V|-version)?$/) {
-      main::show_version();
+      ::show_version();
     } elsif ($opt eq '--quiet') { # undocumented
       $op_quiet = 2;
     } else {
