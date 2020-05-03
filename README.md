@@ -400,8 +400,11 @@ MIT ライセンス
 更新履歴
 --------
 
+  * Version 1.3.0 〈2020/05/03〉
+      - 一部サブコマンドに `--compact` オプションを追加。
+      - jfmutil: `compact` コマンドを追加。
+
   * Version 1.2.4 〈2020/05/02〉
-      - jfmutil: (試験的) `compact` コマンドを追加。
 
   * Version 1.2.3 〈2019/09/02〉
       - jfmutil: ZRTeXtor 1.7.0 版に同期。
