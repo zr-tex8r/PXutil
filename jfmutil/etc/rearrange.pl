@@ -325,13 +325,13 @@ sub read_option {
 #------------------------------- jodel
 
 our %standard_vf = (
-  'rml'             => [1, 'hXXXN-h'],
-  'rmlv'            => [1, 'hXXXN-v'],
+  'rml'             => [1, 'JhXXXN-h'],
+  'rmlv'            => [1, 'JhXXXN-v'],
   'uprml-h'         => [2, 'uphXXXN-h'],
   'uprml-hq'        => [2, 'jodhXXX-hq'],
   'uprml-v'         => [2, 'uphXXXN-v'],
-  'gbm'             => [1, 'hXXXN-h'],
-  'gbmv'            => [1, 'hXXXN-v'],
+  'gbm'             => [1, 'JhXXXN-h'],
+  'gbmv'            => [1, 'JhXXXN-v'],
   'upgbm-h'         => [2, 'uphXXXN-h'],
   'upgbm-hq'        => [2, 'jodhXXX-hq'],
   'upgbm-v'         => [2, 'uphXXXN-v'],
@@ -368,8 +368,9 @@ sub jodel_vf_name {
 }
 sub jodel_tfm_name {
   my ($shp, $nn, $nam) = @_;
-  $nam =~ s/XXX/\Q$shp\E/; $nam =~ s/N/\Q$nn\E/;
-  return $nam;
+  local $_ = $nam; my $jod = ($nn eq 'n') ? 'jod' : '';
+  s/XXX/\Q$shp\E/; s/N/\Q$nn\E/; s/J/\Q$jod\E/;
+  return $_;
 }
 sub jodel_for_uptex {
   return ($jengine == 2 || ($jengine == 3 && $op_uptex));
