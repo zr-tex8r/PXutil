@@ -11,6 +11,7 @@ my $mod_date = '2020/05/02';
 #use Data::Dump 'dump';
 #
 my ($sw_hex, $sw_uptool, $sw_noencout, $inenc, $exenc, $sw_lenient);
+my ($sw_compact);
 my ($proc_name, $infile, $in2file ,$outfile, $out2file);
 
 #### main procedure
@@ -56,6 +57,7 @@ sub main_zvp02vf {
   read_option();
   $t = read_whole_file(kpse($infile)) or error();
   $t = pl_parse($t) or error();
+  ($sw_compact) and $t = do_compact_vf($t);
   $t = vf_form($t) or error();
   write_whole_file($outfile, $t, 1) or error();
 }
@@ -91,7 +93,6 @@ sub main_tfm2zpl {
   write_whole_file($outfile, $t) or error();
 }
 
-
 sub main_zpl2tfm {
   my ($t);
   read_option();
@@ -100,6 +101,28 @@ sub main_zpl2tfm {
   $t = pl_parse($t) or error();
   $t = jfm_form($t) or error();
   write_whole_file($outfile, $t, 1) or error();
+}
+
+sub is_simple_char {
+  local ($_) = @_;
+  ($#$_ == 4 &&
+    $_->[0] eq 'CHARACTER' &&
+    $_->[3][0] eq 'CHARWD' &&
+    $_->[4][0] eq 'MAP'
+  ) or return;
+  my $cc = ::pl_value($_, 1);
+  $_ = $_->[4];
+  ($#$_ == 1 &&
+    $_->[1][0] eq 'SETCHAR' &&
+    ::pl_value($_->[1], 1) == $cc
+  ) or return;
+  return 1;
+}
+
+sub do_compact_vf {
+  my ($t) = @_;
+  $t = [ grep { !is_simple_char($_) } (@$t) ];
+  return $t;
 }
 
 sub show_usage {
@@ -131,6 +154,7 @@ Options:
   -o / --octal    output charcode in 'O' form
   --uptool        use upTeX tools (uppltotf etc.)
   --lenient       ignore non-fatal error on VFs
+  --compact       output VF in compact form
   The following options affect interpretation of 'K' form.
   --kanji=ENC     set source encoding: ENC=jis/sjis/euc/utf8/none
   --kanji-internal=ENC set internal encoding: ENC=jis/unicode/none
@@ -172,6 +196,8 @@ sub read_option {
       $exenc = $arg;
     } elsif (($arg) = $opt =~ m/^--kanji-internal[=:](.*)$/) {
       $inenc = $arg;
+    } elsif ($opt eq '--compact') {
+      $sw_compact = 1;
     } else {
       error("invalid option", $opt);
     }
@@ -199,6 +225,9 @@ sub read_option {
     ($infile, $outfile) = fix_pathname(".tfm", ".zpl");
   } elsif ($proc_name eq 'zpl2tfm') {
     ($infile, $outfile) = fix_pathname(".zpl", ".tfm");
+  }
+  if ($sw_compact && $proc_name ne 'zvp02vf') {
+    alert("option unsupported for '$proc_name'", "--compact");
   }
   ($infile ne $outfile)
     or error("input and output file have same name", $infile);

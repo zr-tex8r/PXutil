@@ -111,7 +111,7 @@ package main;
 ##pxutil##
 #================================================= END
 
-#------------------------------------------------- pxcopyfont interfaces
+#------------------------------------------------- extra interfaces
 
 *usage_message_org = \&usage_message;
 
@@ -141,6 +141,7 @@ Options:
   --unicode     generate VF for 'direct-unicode' mode imposed by pxufont
                 package; this option is supported only for upTeX fonts and
                 thus implies '--uptex' (only for jodel)
+  --compact     output VF in compact form
 
 * VF Compaction
 Usage: $prog_name compact <in.vf> <out.vf>
@@ -186,6 +187,7 @@ package PXCopyFont;
 *error = *main::error;
 
 our ($src_main, $dst_main, @dst_base, $op_zero, $op_uptex, $op_quiet);
+our ($op_compact, $op_dbgone);
 
 sub info {
   ($op_quiet) or ::show_info(@_);
@@ -193,6 +195,7 @@ sub info {
 
 sub copy_vf {
   local $_ = ::read_whole_file(::kpse("$src_main.vf"), 1) or error();
+  ($op_compact) and $_ = compact_vf($_);
   my $vfc = parse_vf($_);
   my ($nb, $nb1) = (scalar(@{$vfc->[0]}), scalar(@dst_base));
   info("number of base TFMs in '$src_main'", $nb);
@@ -261,9 +264,18 @@ sub form_vf {
   return $tfm . ("\xf8" x (4 - length($tfm) % 4));
 }
 
+sub compact_vf {
+  my ($vf) = @_;
+  my $pl = ::vf_parse($vf) or error();
+  $pl = [ grep { !::is_simple_char($_) } (@$pl) ];
+  $vf = ::vf_form($pl) or error();
+  return $vf;
+}
+
 sub read_option {
   my ($proc) = @_;
   $op_zero = 0; $op_uptex = 0; $op_quiet = 0;
+  $op_compact = 0; $op_dbgone = 0;
   while ($ARGV[0] =~ m/^-/) {
     my $opt = shift(@ARGV);
     if ($opt =~ m/^--?h(elp)?$/) {
@@ -276,6 +288,10 @@ sub read_option {
       $op_uptex = 1;
     } elsif ($opt eq '--unicode') {
       $op_uptex = 2;
+    } elsif ($opt eq '--compact') {
+      $op_compact = 1;
+    } elsif ($opt eq '--debug-one') { # undocumented
+      $op_dbgone = 1;
     } elsif ($opt eq '--quiet') { # undocumented
       $op_quiet = 2;
     } else {
@@ -327,6 +343,7 @@ our @shape = (
 our ($jengine, $jtate, @jvfname, %jvfidx, %jvfparsed);
 
 sub jodel {
+  ($op_dbgone) and @shape = @shape[1];
   jodel_analyze();
   if ($op_uptex == 2) {
     ($jengine == 2)
@@ -389,6 +406,7 @@ sub jodel_analyze {
     my $nvf = $jvfname[$i];
     $_ = ::read_whole_file(jodel_kpse("$nvf.vf"), 1)
       or error(($i > 0) ? ("non-standard raw TFM", $nvf) : ());
+    ($op_compact) and $_ = compact_vf($_);
     $_ = parse_vf($_) or error();
     $jvfidx{$nvf} = $i; $jvfparsed{$nvf} = $_;
     my @lst = map { $_->[1] } @{$_->[0]};
@@ -461,28 +479,12 @@ sub num_chars {
   return $c;
 }
 
-sub is_simple_char {
-  local ($_) = @_;
-  ($#$_ == 4 &&
-    $_->[0] eq 'CHARACTER' &&
-    $_->[3][0] eq 'CHARWD' &&
-    $_->[4][0] eq 'MAP'
-  ) or return;
-  my $cc = ::pl_value($_, 1);
-  $_ = $_->[4];
-  ($#$_ == 1 &&
-    $_->[1][0] eq 'SETCHAR' &&
-    ::pl_value($_->[1], 1) == $cc
-  ) or return;
-  return 1;
-}
-
 sub compact {
   local $_ = ::read_whole_file(::kpse("$src_name.vf"), 1) or error();
   my $pl = ::vf_parse($_) or error();
   my ($siz, $nc) = (length($_), num_chars($pl));
   info("from", "$siz bytes, $nc chars", "$src_name.vf");
-  $pl = [ grep { !is_simple_char($_) } (@$pl) ];
+  $pl = [ grep { !::is_simple_char($_) } (@$pl) ];
   $_ = ::vf_form($pl) or error();
   ($siz, $nc) = (length($_), num_chars($pl));
   ::write_whole_file("$dst_name.vf", $_, 1) or error();
