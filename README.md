@@ -400,6 +400,9 @@ MIT ライセンス
 更新履歴
 --------
 
+  * Version 1.3.1 〈2020/05/04〉
+      - jfmutil: `jodel` を jodhminrn フォントに対応させる。
+
   * Version 1.3.0 〈2020/05/03〉
       - 一部サブコマンドに `--compact` オプションを追加。
       - jfmutil: `compact` コマンドを追加。

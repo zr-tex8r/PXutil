@@ -85,6 +85,9 @@ Please refer to README-ja.md (in Japanese) for detail.
 Revision History
 ----------------
 
+  * Version 1.3.1 〈2020/05/04〉
+      - Now `jodel` uses VF of jodhminrn family.
+
   * Version 1.3.0 〈2020/05/03〉
       - Add `--compact` option for some subcommands.
       - Add `compact` subcommand.
