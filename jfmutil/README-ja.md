@@ -466,6 +466,10 @@ upTeX 標準の `upjpnrm-h.vf` の場合、以下の出力になる：
 更新履歴
 --------
 
+  * Version 1.3.2 〈2021/05/29〉
+      - ZRTeXtor 1.8.0 版に同期。変更点は：
+          + charpacket のない VF を許容する。
+
   * Version 1.3.1 〈2020/05/04〉
       - `jodel` を jodhminrn フォントに対応させる。
 

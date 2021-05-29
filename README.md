@@ -400,6 +400,8 @@ MIT ライセンス
 更新履歴
 --------
 
+  * Version 1.3.2 〈2020/05/29〉
+
   * Version 1.3.1 〈2020/05/04〉
       - jfmutil: `jodel` を jodhminrn フォントに対応させる。
 

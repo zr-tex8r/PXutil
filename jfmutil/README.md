@@ -1,3 +1,4 @@
+
 jfmutil
 =======
 
@@ -84,6 +85,10 @@ Please refer to README-ja.md (in Japanese) for detail.
 
 Revision History
 ----------------
+
+  * Version 1.3.2 〈2021/05/29〉
+      - Use ZRTeXtor v1.8.0. The changes are:
+          + Allow VFs with no charpackets.
 
   * Version 1.3.1 〈2020/05/04〉
       - Now `jodel` uses VF of jodhminrn family.
